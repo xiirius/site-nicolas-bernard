@@ -1,34 +1,196 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Base styles */
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Color System - Green & White Theme */
+:root {
+  /* Backgrounds */
+  --bg-page: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-section: #F9FAF9;
+  --bg-green-light: #F0F7F0;
+  
+  /* Text Colors */
+  --text-primary: #2C3E2C;
+  --text-secondary: #4A5F4A;
+  --text-muted: #6B7B6B;
+  
+  /* Green Accent Colors */
+  --green-50: #F0F7F0;
+  --green-100: #E1F0E1;
+  --green-200: #C3E1C3;
+  --green-600: #7FB069;
+  --green-700: #6A9757;
+  --green-800: #557E45;
+  
+  /* Borders */
+  --border-primary: #E5E7EB;
+  --border-green: #C3E1C3;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-    color: #61dafb;
+/* Typography */
+.heading-hero {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.heading-1 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.heading-2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.heading-3 {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.body-large {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.body-medium {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.body-small {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.caption {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* Button Styles */
+.btn-primary {
+  background: var(--text-primary);
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.btn-primary:hover {
+  background: var(--green-700);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(127, 176, 105, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(180deg, var(--green-50) 0%, var(--bg-page) 100%);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem 3rem;
+  position: relative;
+}
+
+/* Cards */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4rem 1rem 2rem;
+    min-height: 60vh;
+  }
+  
+  .btn-primary {
+    width: 100%;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--green-600);
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background: var(--green-200);
+  color: var(--text-primary);
 }
