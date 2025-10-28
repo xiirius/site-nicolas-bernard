@@ -9,27 +9,59 @@ const HomePage = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="hero-section">
-        <div className="container mx-auto px-6 py-20">
+        {/* Decorative background elements */}
+        <div className="hero-decoration hero-decoration-1"></div>
+        <div className="hero-decoration hero-decoration-2"></div>
+        <div className="hero-decoration hero-decoration-3"></div>
+        
+        <div className="container mx-auto px-6 py-20 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-green-50 rounded-full px-4 py-2 mb-8">
-              <Heart className="w-4 h-4 text-green-600" />
-              <span className="text-sm font-medium text-green-700">Accompagnement bienveillant</span>
+            <div className="inline-flex items-center gap-2 bg-white border-2 border-green-200 rounded-full px-5 py-2.5 mb-8 shadow-sm">
+              <Heart className="w-5 h-5 text-green-600" />
+              <span className="text-sm font-semibold text-green-700">Accompagnement bienveillant</span>
             </div>
             
             <h1 className="heading-hero mb-6">
               Bienvenue dans mon espace d'accompagnement
             </h1>
             
-            <p className="body-large text-gray-600 mb-8 max-w-3xl mx-auto">
-              Je suis Nicolas Bernard, thérapeute, coach de santé et de vie, ancien préparateur physique et éducateur spécialisé. 
-              Mon parcours, riche de 30 ans d'expérience, m'a permis de développer une approche unique qui lie écoute, soutien moral et accompagnement holistique.
+            <p className="body-large text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Je suis <span className="font-semibold text-green-700">Nicolas Bernard</span>, thérapeute, coach de santé et de vie, ancien préparateur physique et éducateur spécialisé. 
+              Mon parcours, riche de <span className="font-semibold text-green-700">30 ans d'expérience</span>, m'a permis de développer une approche unique qui lie écoute, soutien moral et accompagnement holistique.
             </p>
+            
+            {/* Key Benefits Cards */}
+            <div className="grid md:grid-cols-3 gap-4 mb-10 max-w-3xl mx-auto">
+              <div className="bg-white border-2 border-green-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Heart className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="font-semibold text-gray-800 mb-2">Écoute active</h3>
+                <p className="text-sm text-gray-600">Sans jugement ni contrainte</p>
+              </div>
+              
+              <div className="bg-white border-2 border-green-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Users className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="font-semibold text-gray-800 mb-2">Tarif solidaire</h3>
+                <p className="text-sm text-gray-600">15 € de l'heure</p>
+              </div>
+              
+              <div className="bg-white border-2 border-green-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <MapPin className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="font-semibold text-gray-800 mb-2">Flexible</h3>
+                <p className="text-sm text-gray-600">En ligne ou en présentiel</p>
+              </div>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/reservation">
-                <Button className="btn-primary">
+                <Button className="btn-primary text-base px-8 py-3">
                   Réserver une consultation
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
             </div>
