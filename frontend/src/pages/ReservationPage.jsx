@@ -264,13 +264,6 @@ const ReservationPage = () => {
                   </Button>
                 </div>
 
-                {/* Demo Notice */}
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                  <p className="body-small text-gray-700">
-                    <strong>Mode démo :</strong> Les paiements Stripe et l'envoi d'emails sont actuellement simulés. 
-                    L'intégration réelle sera activée prochainement avec vos clés API.
-                  </p>
-                </div>
               </form>
             </CardContent>
           </Card>
