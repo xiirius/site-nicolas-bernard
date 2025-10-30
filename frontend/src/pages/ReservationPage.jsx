@@ -256,7 +256,7 @@ const ReservationPage = () => {
                     {isSubmitting ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Traitement en cours...
+                        Redirection vers le paiement...
                       </>
                     ) : (
                       'Confirmer ma réservation'
