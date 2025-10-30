@@ -66,6 +66,12 @@ async def get_status_checks():
     
     return status_checks
 
+# Import and include the reservation and webhook routers
+from routes import reservations, webhooks
+
+app.include_router(reservations.router)
+app.include_router(webhooks.router)
+
 # Include the router in the main app
 app.include_router(api_router)
 
