@@ -14,6 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/reservation" element={<ReservationPage />} />
+          <Route path="/success" element={<SuccessPage />} />
+          <Route path="/cancel" element={<CancelPage />} />
         </Routes>
       </BrowserRouter>
       <Toaster />
