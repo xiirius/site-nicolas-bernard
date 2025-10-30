@@ -57,36 +57,20 @@ const ReservationPage = () => {
     setIsSubmitting(true);
 
     try {
-      // Mock payment processing
-      const paymentResult = await mockStripePayment(15, {
-        nom: formData.nom,
-        prenom: formData.prenom,
-        email: formData.email
-      });
+      // Appeler le backend pour créer la session Stripe
+      const response = await axios.post(`${API}/reservations/create-checkout-session`, formData);
 
-      if (paymentResult.success) {
-        // Mock email sending
-        const emailResult = await mockSendConfirmationEmail({
-          to: formData.email,
-          subject: 'Confirmation de réservation',
-          content: `Bonjour ${formData.prenom},\n\nVotre réservation a bien été confirmée.\n\nNicolas Bernard`
-        });
-
-        if (emailResult.success) {
-          setShowSuccess(true);
-          toast({
-            title: "Réservation confirmée !",
-            description: "Un email de confirmation vous a été envoyé."
-          });
-        }
+      if (response.data.success) {
+        // Rediriger vers Stripe Checkout
+        window.location.href = response.data.sessionUrl;
       }
     } catch (error) {
+      console.error("Erreur:", error);
       toast({
         title: "Erreur",
-        description: "Une erreur est survenue. Veuillez réessayer.",
+        description: error.response?.data?.detail || "Une erreur est survenue. Veuillez réessayer.",
         variant: "destructive"
       });
-    } finally {
       setIsSubmitting(false);
     }
   };
