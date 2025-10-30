@@ -16,7 +16,6 @@ const API = `${BACKEND_URL}/api`;
 const ReservationPage = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
   const [formData, setFormData] = useState({
     nom: '',
     prenom: '',
