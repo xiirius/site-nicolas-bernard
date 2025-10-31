@@ -167,78 +167,100 @@ const HomePage = () => {
       </section>
 
       {/* Consultation Formats Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6">
+      <section className="py-16 bg-gradient-to-b from-white to-gray-50 relative">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="container mx-auto px-6 relative">
           <div className="max-w-5xl mx-auto">
-            <h2 className="heading-1 mb-12 text-center">Formats de consultations-rencontres proposées</h2>
+            <div className="text-center mb-12">
+              <span className="text-xs uppercase tracking-wider text-green-600 font-semibold mb-3 block">Mes services</span>
+              <h2 className="heading-1 mb-3">Formats de consultations-rencontres proposées</h2>
+              <div className="w-16 h-1 bg-green-500 mx-auto rounded-full"></div>
+            </div>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card className="hover:shadow-xl transition-all duration-300 border-l-4 border-l-green-500 group bg-white">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-green-100 p-3 rounded-lg">
+                    <div className="bg-gradient-to-br from-green-100 to-green-50 p-3.5 rounded-xl group-hover:scale-110 transition-transform">
                       <Heart className="w-6 h-6 text-green-600" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="heading-3 mb-2">Consultation individuelle (temps libre)</h3>
-                      <p className="body-small text-gray-600 mb-3">
+                      <h3 className="heading-3 mb-2 group-hover:text-green-700 transition-colors">Consultation individuelle</h3>
+                      <span className="text-xs bg-green-100 text-green-700 px-2.5 py-1 rounded-full font-medium">Temps libre</span>
+                      <p className="body-small text-gray-600 mt-3 mb-3">
                         Dans cette formule, vous avez la possibilité de bénéficier d'un accompagnement sans contrainte de temps. 
                         La durée de la rencontre peut varier entre 30 minutes et 2 heures, selon vos besoins.
                       </p>
-                      <p className="font-medium text-green-700">Tarif solidaire : 15 € de l'heure</p>
+                      <div className="flex items-center gap-2 mt-4">
+                        <div className="w-8 h-px bg-green-300"></div>
+                        <p className="font-semibold text-green-700 text-sm">15 € / heure</p>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card className="hover:shadow-xl transition-all duration-300 border-l-4 border-l-blue-500 group bg-white">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-green-100 p-3 rounded-lg">
-                      <Users className="w-6 h-6 text-green-600" />
+                    <div className="bg-gradient-to-br from-blue-100 to-blue-50 p-3.5 rounded-xl group-hover:scale-110 transition-transform">
+                      <Users className="w-6 h-6 text-blue-600" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="heading-3 mb-2">Consultation en duo (tarifs identiques)</h3>
-                      <p className="body-small text-gray-600 mb-3">
+                      <h3 className="heading-3 mb-2 group-hover:text-blue-700 transition-colors">Consultation en duo</h3>
+                      <span className="text-xs bg-blue-100 text-blue-700 px-2.5 py-1 rounded-full font-medium">Tarifs identiques</span>
+                      <p className="body-small text-gray-600 mt-3 mb-3">
                         Vous souhaitez être accompagné(e) en duo ? Que ce soit avec un proche, un collègue ou un partenaire, 
                         je vous propose des consultations en binôme dans un cadre bienveillant.
                       </p>
-                      <p className="font-medium text-green-700">Tarif solidaire : 15 € par personne, à l'heure</p>
+                      <div className="flex items-center gap-2 mt-4">
+                        <div className="w-8 h-px bg-blue-300"></div>
+                        <p className="font-semibold text-blue-700 text-sm">15 € / personne / heure</p>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card className="hover:shadow-xl transition-all duration-300 border-l-4 border-l-orange-500 group bg-white">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-green-100 p-3 rounded-lg">
-                      <MapPin className="w-6 h-6 text-green-600" />
+                    <div className="bg-gradient-to-br from-orange-100 to-orange-50 p-3.5 rounded-xl group-hover:scale-110 transition-transform">
+                      <MapPin className="w-6 h-6 text-orange-600" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="heading-3 mb-2">Consultation nomade</h3>
-                      <p className="body-small text-gray-600 mb-3">
+                      <h3 className="heading-3 mb-2 group-hover:text-orange-700 transition-colors">Consultation nomade</h3>
+                      <span className="text-xs bg-orange-100 text-orange-700 px-2.5 py-1 rounded-full font-medium">Flexible</span>
+                      <p className="body-small text-gray-600 mt-3 mb-3">
                         Je vous offre également la possibilité de vous rencontrer là où vous vous sentez bien. Que ce soit dans un café, 
                         dans un lieu calme, ou même chez vous, je viens à votre rencontre.
                       </p>
-                      <p className="font-medium text-green-700">Tarif solidaire : 15 € de l'heure (selon mes disponibilités)</p>
+                      <div className="flex items-center gap-2 mt-4">
+                        <div className="w-8 h-px bg-orange-300"></div>
+                        <p className="font-semibold text-orange-700 text-sm">15 € / heure <span className="text-gray-500 font-normal text-xs">(selon disponibilités)</span></p>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card className="hover:shadow-xl transition-all duration-300 border-l-4 border-l-purple-500 group bg-white">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-green-100 p-3 rounded-lg">
-                      <Heart className="w-6 h-6 text-green-600" />
+                    <div className="bg-gradient-to-br from-purple-100 to-purple-50 p-3.5 rounded-xl group-hover:scale-110 transition-transform">
+                      <Heart className="w-6 h-6 text-purple-600" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="heading-3 mb-2">Réorientation vers d'autres thérapeutes solidaires</h3>
-                      <p className="body-small text-gray-600 mb-3">
+                      <h3 className="heading-3 mb-2 group-hover:text-purple-700 transition-colors">Réorientation thérapeutique</h3>
+                      <span className="text-xs bg-purple-100 text-purple-700 px-2.5 py-1 rounded-full font-medium">Réseau solidaire</span>
+                      <p className="body-small text-gray-600 mt-3 mb-3">
                         Si vos besoins vont au-delà de ce que je peux vous offrir, je vous réoriente vers un collectif de thérapeutes solidaires. 
                         En tant que créateur et membre de ce collectif, je vous aiderai à trouver un autre professionnel.
                       </p>
+                      <div className="flex items-center gap-2 mt-4">
+                        <div className="w-8 h-px bg-purple-300"></div>
+                        <p className="font-semibold text-purple-700 text-sm">Service gratuit</p>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
