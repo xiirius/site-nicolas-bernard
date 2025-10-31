@@ -96,52 +96,72 @@ const HomePage = () => {
       </section>
 
       {/* Approach Section */}
-      <section className="py-16">
+      <section className="py-16 relative">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="heading-1 mb-8 text-center">Mon approche, ma vision et ma mission</h2>
+            <div className="text-center mb-10">
+              <span className="text-xs uppercase tracking-wider text-green-600 font-semibold mb-3 block">Philosophie</span>
+              <h2 className="heading-1 mb-3">Mon approche, ma vision et ma mission</h2>
+              <div className="w-16 h-1 bg-green-500 mx-auto rounded-full"></div>
+            </div>
             
             <div className="space-y-6 mb-8">
-              <p className="body-medium text-gray-700 leading-relaxed">
-                En tant que coach de santé, de vie et psychopraticien, ma mission est d'apporter un soutien global à ceux qui en ont besoin, 
-                sans jugement et sans contrainte. Ma démarche est fondée sur une écoute incarnée et un accompagnement laïc, où chaque individu 
-                est vu dans sa globalité : émotionnelle, physique et mentale. (Une subtile alchimie en fonction de vos besoins entre 
-                l'accompagnement sans jugement, un soutient moral, une réorientation de votre trajectoire, un retour vers la vitalité moral et physique)
-              </p>
+              <div className="bg-gradient-to-br from-green-50/50 to-white border border-green-100/50 rounded-2xl p-6 shadow-sm">
+                <p className="body-medium text-gray-700 leading-relaxed">
+                  En tant que coach de santé, de vie et psychopraticien, ma mission est d'apporter un soutien global à ceux qui en ont besoin, 
+                  sans jugement et sans contrainte. Ma démarche est fondée sur une écoute incarnée et un accompagnement laïc, où chaque individu 
+                  est vu dans sa globalité : émotionnelle, physique et mentale. (Une subtile alchimie en fonction de vos besoins entre 
+                  l'accompagnement sans jugement, un soutient moral, une réorientation de votre trajectoire, un retour vers la vitalité moral et physique)
+                </p>
+              </div>
               
-              <p className="body-medium text-gray-700 leading-relaxed">
+              <p className="body-medium text-gray-700 leading-relaxed pl-6 border-l-2 border-green-200">
                 Je crois profondément en l'importance de la relance personnelle et du réancrage, que ce soit dans le cadre d'une reconversion 
                 personnelle, d'un professionnel de soin, ou simplement dans l'envie de retrouver une vitalité perdue. Je vous guide sur le 
                 chemin de la conscience de soi, du bien-être mental et de l'épanouissement personnel.
               </p>
             </div>
 
-            <Card className="bg-green-50 border-green-200">
-              <CardContent className="p-6">
-                <h3 className="heading-3 mb-4 text-green-800">Mon approche repose sur des valeurs solides :</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <span className="text-green-600 mt-1">•</span>
-                    <span className="body-medium text-gray-700">L'écoute active et l'accompagnement dans une démarche solidaire</span>
+            <Card className="bg-white border-green-200 shadow-md overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 via-green-500 to-green-400"></div>
+              <CardContent className="p-8 pt-10">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                    <Heart className="w-5 h-5 text-green-600" />
+                  </div>
+                  <h3 className="heading-3 text-green-800">Mes valeurs fondamentales</h3>
+                </div>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-4 group">
+                    <div className="w-8 h-8 bg-green-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-green-100 transition-colors">
+                      <span className="text-green-600 font-bold text-sm">1</span>
+                    </div>
+                    <span className="body-medium text-gray-700 pt-1">L'écoute active et l'accompagnement dans une démarche solidaire</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-green-600 mt-1">•</span>
-                    <span className="body-medium text-gray-700">L'authenticité de la relation et la confiance</span>
+                  <li className="flex items-start gap-4 group">
+                    <div className="w-8 h-8 bg-green-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-green-100 transition-colors">
+                      <span className="text-green-600 font-bold text-sm">2</span>
+                    </div>
+                    <span className="body-medium text-gray-700 pt-1">L'authenticité de la relation et la confiance</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-green-600 mt-1">•</span>
-                    <span className="body-medium text-gray-700">L'engagement humain et la transparence</span>
+                  <li className="flex items-start gap-4 group">
+                    <div className="w-8 h-8 bg-green-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-green-100 transition-colors">
+                      <span className="text-green-600 font-bold text-sm">3</span>
+                    </div>
+                    <span className="body-medium text-gray-700 pt-1">L'engagement humain et la transparence</span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <p className="body-medium text-gray-700 leading-relaxed mt-6">
-              Je me considère comme un "confesseur laïc", une figure d'accompagnement qui vous aide à trouver les réponses en vous-même, 
-              en dehors de toute contrainte religieuse ou dogmatique. Ma mission est de vous soutenir dans vos réflexions et de vous offrir 
-              un espace d'expression et de détente. Mon travail est celui d'un coach de santé et de vie dans toute sa profondeur, pour ceux 
-              qui sont à la recherche d'un soutien moral, émotionnel et de réponses concrètes pour avancer sereinement.
-            </p>
+            <div className="mt-8 bg-gradient-to-r from-green-50 to-blue-50 border border-green-100 rounded-2xl p-6">
+              <p className="body-medium text-gray-700 leading-relaxed italic">
+                Je me considère comme un <strong>"confesseur laïc"</strong>, une figure d'accompagnement qui vous aide à trouver les réponses en vous-même, 
+                en dehors de toute contrainte religieuse ou dogmatique. Ma mission est de vous soutenir dans vos réflexions et de vous offrir 
+                un espace d'expression et de détente. Mon travail est celui d'un coach de santé et de vie dans toute sa profondeur, pour ceux 
+                qui sont à la recherche d'un soutien moral, émotionnel et de réponses concrètes pour avancer sereinement.
+              </p>
+            </div>
           </div>
         </div>
       </section>
