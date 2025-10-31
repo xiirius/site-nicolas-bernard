@@ -14,16 +14,18 @@ const HomePage = () => {
         <div className="hero-decoration hero-decoration-2"></div>
         <div className="hero-decoration hero-decoration-3"></div>
         
-        <div className="container mx-auto px-6 py-20 relative z-10">
+        <div className="container mx-auto px-6 py-16 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-white border-2 border-green-200 rounded-full px-5 py-2.5 mb-8 shadow-sm">
-              <Heart className="w-5 h-5 text-green-600" />
-              <span className="text-sm font-semibold text-green-700">Accompagnement bienveillant</span>
+            <div className="inline-flex items-center gap-2 bg-white border border-green-200 rounded-full px-5 py-2.5 mb-6 shadow-sm">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="text-sm font-medium text-gray-700">Accompagnement bienveillant</span>
             </div>
             
-            <h1 className="heading-hero mb-6">
+            <h1 className="heading-hero mb-5">
               Bienvenue dans mon espace d'accompagnement
             </h1>
+            
+            <div className="w-20 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent mx-auto mb-6 opacity-40"></div>
             
             <p className="body-large text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
               Je suis <span className="font-semibold text-green-700">Nicolas Bernard</span>, thérapeute, coach de santé et de vie, ancien préparateur physique et éducateur spécialisé. 
@@ -31,56 +33,64 @@ const HomePage = () => {
             </p>
             
             {/* Key Benefits Cards */}
-            <div className="grid md:grid-cols-3 gap-4 mb-10 max-w-3xl mx-auto">
-              <div className="bg-white border-2 border-green-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Heart className="w-6 h-6 text-green-600" />
+            <div className="grid md:grid-cols-3 gap-4 mb-8 max-w-3xl mx-auto">
+              <div className="bg-white/60 backdrop-blur-sm border border-green-100 rounded-xl p-4 hover:bg-white hover:shadow-lg transition-all duration-300 group">
+                <div className="w-11 h-11 bg-gradient-to-br from-green-100 to-green-50 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                  <Heart className="w-5 h-5 text-green-600" />
                 </div>
-                <h3 className="font-semibold text-gray-800 mb-2">Écoute active</h3>
-                <p className="text-sm text-gray-600">Sans jugement ni contrainte</p>
+                <h3 className="font-semibold text-gray-800 mb-1 text-sm">Écoute active</h3>
+                <p className="text-xs text-gray-600">Sans jugement ni contrainte</p>
               </div>
               
-              <div className="bg-white border-2 border-green-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Users className="w-6 h-6 text-green-600" />
+              <div className="bg-white/60 backdrop-blur-sm border border-green-100 rounded-xl p-4 hover:bg-white hover:shadow-lg transition-all duration-300 group">
+                <div className="w-11 h-11 bg-gradient-to-br from-green-100 to-green-50 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                  <Users className="w-5 h-5 text-green-600" />
                 </div>
-                <h3 className="font-semibold text-gray-800 mb-2">Tarif solidaire</h3>
-                <p className="text-sm text-gray-600">15 € de l'heure</p>
+                <h3 className="font-semibold text-gray-800 mb-1 text-sm">Tarif solidaire</h3>
+                <p className="text-xs text-gray-600">15 € de l'heure</p>
               </div>
               
-              <div className="bg-white border-2 border-green-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <MapPin className="w-6 h-6 text-green-600" />
+              <div className="bg-white/60 backdrop-blur-sm border border-green-100 rounded-xl p-4 hover:bg-white hover:shadow-lg transition-all duration-300 group">
+                <div className="w-11 h-11 bg-gradient-to-br from-green-100 to-green-50 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                  <MapPin className="w-5 h-5 text-green-600" />
                 </div>
-                <h3 className="font-semibold text-gray-800 mb-2">Flexible</h3>
-                <p className="text-sm text-gray-600">En ligne ou en présentiel</p>
+                <h3 className="font-semibold text-gray-800 mb-1 text-sm">Flexible</h3>
+                <p className="text-xs text-gray-600">En ligne ou en présentiel</p>
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <Link to="/reservation">
-                <Button className="btn-primary text-base px-8 py-3">
+                <Button className="btn-primary text-base px-8 py-3.5 shadow-lg hover:shadow-xl">
                   Réserver une consultation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
             </div>
+            
+            <p className="text-sm text-gray-500 italic">Première consultation sans engagement</p>
           </div>
         </div>
       </section>
 
       {/* Introduction Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-14 bg-gradient-to-b from-gray-50 to-white relative">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-green-200 to-transparent"></div>
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <p className="body-large text-gray-700 leading-relaxed mb-6">
-              Ce site est un espace d'écoute libre, de guidance et de réancrage personnel. En tant que thérapeute engagé, 
-              je vous propose un accompagnement sans pression, dans un cadre solidaire et respectueux.
-            </p>
-            <p className="body-large text-gray-700 leading-relaxed">
-              Vous y trouverez un soutien moral essentiel, particulièrement si vous traversez une période de transition, 
-              si vous êtes étudiant ou adulte en reconversion, ou si vous êtes en parcours de soin.
-            </p>
+            <div className="flex items-start gap-4 mb-8">
+              <div className="w-1 h-24 bg-gradient-to-b from-green-500 to-green-200 rounded-full flex-shrink-0 mt-1"></div>
+              <div>
+                <p className="body-large text-gray-700 leading-relaxed mb-5">
+                  Ce site est un espace d'écoute libre, de guidance et de réancrage personnel. En tant que thérapeute engagé, 
+                  je vous propose un accompagnement sans pression, dans un cadre solidaire et respectueux.
+                </p>
+                <p className="body-large text-gray-700 leading-relaxed">
+                  Vous y trouverez un soutien moral essentiel, particulièrement si vous traversez une période de transition, 
+                  si vous êtes étudiant ou adulte en reconversion, ou si vous êtes en parcours de soin.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
