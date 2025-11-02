@@ -32,23 +32,7 @@ body::after {
   pointer-events: none;
 }
 
-/* Overlay to soften the background */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.85);
-  background-image: url('https://images.pexels.com/photos/7615622/pexels-photo-7615622.jpeg?auto=compress&cs=tinysrgb&w=1200');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.25;
-  z-index: -1;
-  pointer-events: none;
-}
+/* Overlay removed - using SVG pattern instead */
 
 /* Color System - Green & White Theme */
 :root {
