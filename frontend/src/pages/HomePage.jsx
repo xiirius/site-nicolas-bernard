@@ -32,6 +32,18 @@ const HomePage = () => {
               Mon parcours, riche de <span className="font-semibold text-green-700">30 ans d'expérience</span>, m'a permis de développer une approche unique qui lie écoute, soutien moral et accompagnement holistique.
             </p>
             
+            {/* Introduction Text */}
+            <div className="bg-white/70 backdrop-blur-sm border border-green-100 rounded-2xl p-6 mb-8 max-w-3xl mx-auto shadow-sm">
+              <p className="body-medium text-gray-700 leading-relaxed mb-4">
+                Ce site est un espace d'écoute libre, de guidance et de réancrage personnel. En tant que thérapeute engagé, 
+                je vous propose un accompagnement sans pression, dans un cadre solidaire et respectueux.
+              </p>
+              <p className="body-medium text-gray-700 leading-relaxed">
+                Vous y trouverez un soutien moral essentiel, particulièrement si vous traversez une période de transition, 
+                si vous êtes étudiant ou adulte en reconversion, ou si vous êtes en parcours de soin.
+              </p>
+            </div>
+            
             {/* Key Benefits Cards */}
             <div className="grid md:grid-cols-3 gap-4 mb-8 max-w-3xl mx-auto">
               <div className="bg-white/60 backdrop-blur-sm border border-green-100 rounded-xl p-4 hover:bg-white hover:shadow-lg transition-all duration-300 group">
