@@ -14,7 +14,7 @@ body {
   position: relative;
 }
 
-/* Overlay to soften the background - More visible ginkgo */
+/* Overlay to soften the background - Ginkgo très visible */
 body::before {
   content: '';
   position: fixed;
@@ -22,7 +22,7 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.50);
   z-index: -1;
   pointer-events: none;
 }
