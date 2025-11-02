@@ -6,6 +6,25 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: url('https://images.pexels.com/photos/7615618/pexels-photo-7615618.jpeg?auto=compress&cs=tinysrgb&w=1920');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Overlay to soften the background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.92);
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* Color System - Green & White Theme */
