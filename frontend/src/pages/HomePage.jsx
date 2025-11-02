@@ -32,16 +32,54 @@ const HomePage = () => {
               Mon parcours, riche de <span className="font-semibold text-green-700">30 ans d'expérience</span>, m'a permis de développer une approche unique qui lie écoute, soutien moral et accompagnement holistique.
             </p>
             
-            {/* Introduction Text */}
-            <div className="bg-white/70 backdrop-blur-sm border border-green-100 rounded-2xl p-6 mb-8 max-w-3xl mx-auto shadow-sm">
-              <p className="body-medium text-gray-700 leading-relaxed mb-4">
-                Ce site est un espace d'écoute libre, de guidance et de réancrage personnel. En tant que thérapeute engagé, 
-                je vous propose un accompagnement sans pression, dans un cadre solidaire et respectueux.
-              </p>
-              <p className="body-medium text-gray-700 leading-relaxed">
-                Vous y trouverez un soutien moral essentiel, particulièrement si vous traversez une période de transition, 
-                si vous êtes étudiant ou adulte en reconversion, ou si vous êtes en parcours de soin.
-              </p>
+            {/* Introduction Text - Professional Design with Anise Green */}
+            <div className="relative max-w-3xl mx-auto mb-8 group">
+              {/* Decorative corner elements */}
+              <div className="absolute -top-3 -left-3 w-20 h-20 border-t-2 border-l-2 border-green-400 opacity-40 rounded-tl-3xl transition-all duration-300 group-hover:opacity-70"></div>
+              <div className="absolute -bottom-3 -right-3 w-20 h-20 border-b-2 border-r-2 border-green-400 opacity-40 rounded-br-3xl transition-all duration-300 group-hover:opacity-70"></div>
+              
+              {/* Main content box */}
+              <div className="relative bg-gradient-to-br from-green-50/80 via-white to-green-50/60 backdrop-blur-sm border-2 border-green-200/50 rounded-3xl p-8 shadow-lg overflow-hidden">
+                {/* Decorative background pattern */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-300/10 to-transparent rounded-full blur-2xl"></div>
+                <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-green-200/10 to-transparent rounded-full blur-2xl"></div>
+                
+                {/* Quote icon */}
+                <div className="absolute top-4 left-4 text-green-300/30 text-6xl font-serif leading-none">"</div>
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="w-12 h-0.5 bg-gradient-to-r from-green-400 to-green-200 rounded-full"></div>
+                    <span className="text-xs uppercase tracking-widest text-green-600 font-semibold">Mon engagement</span>
+                  </div>
+                  
+                  <p className="text-lg text-gray-700 leading-relaxed mb-5 font-light italic">
+                    Ce site est un espace d'<span className="font-medium text-green-700 not-italic">écoute libre</span>, de guidance et de réancrage personnel. 
+                    En tant que thérapeute engagé, je vous propose un accompagnement <span className="font-medium text-green-700 not-italic">sans pression</span>, 
+                    dans un cadre solidaire et respectueux.
+                  </p>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 mt-2">
+                      <div className="w-10 h-10 bg-gradient-to-br from-green-100 to-green-50 rounded-xl flex items-center justify-center shadow-sm">
+                        <Heart className="w-5 h-5 text-green-600" />
+                      </div>
+                    </div>
+                    <p className="text-base text-gray-700 leading-relaxed font-light">
+                      Vous y trouverez un <span className="font-medium text-green-700">soutien moral essentiel</span>, particulièrement si vous traversez une période de transition, 
+                      si vous êtes étudiant ou adulte en reconversion, ou si vous êtes en parcours de soin.
+                    </p>
+                  </div>
+                  
+                  {/* Bottom decorative line */}
+                  <div className="flex items-center gap-3 mt-6">
+                    <div className="flex-1 h-px bg-gradient-to-r from-transparent via-green-300 to-transparent"></div>
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <div className="flex-1 h-px bg-gradient-to-r from-transparent via-green-300 to-transparent"></div>
+                  </div>
+                </div>
+              </div>
             </div>
             
             {/* Key Benefits Cards */}
