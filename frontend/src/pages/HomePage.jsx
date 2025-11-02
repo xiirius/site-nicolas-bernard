@@ -85,28 +85,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Introduction Section */}
-      <section className="py-14 bg-gradient-to-b from-gray-50 to-white relative">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-green-200 to-transparent"></div>
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-start gap-4 mb-8">
-              <div className="w-1 h-24 bg-gradient-to-b from-green-500 to-green-200 rounded-full flex-shrink-0 mt-1"></div>
-              <div>
-                <p className="body-large text-gray-700 leading-relaxed mb-5">
-                  Ce site est un espace d'écoute libre, de guidance et de réancrage personnel. En tant que thérapeute engagé, 
-                  je vous propose un accompagnement sans pression, dans un cadre solidaire et respectueux.
-                </p>
-                <p className="body-large text-gray-700 leading-relaxed">
-                  Vous y trouverez un soutien moral essentiel, particulièrement si vous traversez une période de transition, 
-                  si vous êtes étudiant ou adulte en reconversion, ou si vous êtes en parcours de soin.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Approach Section */}
       <section className="py-16 relative">
         <div className="container mx-auto px-6">
