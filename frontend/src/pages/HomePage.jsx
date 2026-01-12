@@ -104,9 +104,9 @@ const HomePage = () => {
               </div>
             </div>
             
-            {/* Key Benefits Cards */}
+            {/* Key Benefits Cards - solid white background */}
             <div className="grid md:grid-cols-3 gap-4 mb-8 max-w-3xl mx-auto">
-              <div className="bg-white/60 backdrop-blur-sm border border-green-100 rounded-xl p-4 hover:bg-white hover:shadow-lg transition-all duration-300 group">
+              <div className="bg-white border-2 border-green-200 rounded-xl p-4 hover:shadow-lg transition-all duration-300 group shadow-sm">
                 <div className="w-11 h-11 bg-gradient-to-br from-green-100 to-green-50 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
                   <Heart className="w-5 h-5 text-green-600" />
                 </div>
@@ -114,7 +114,7 @@ const HomePage = () => {
                 <p className="text-xs text-gray-600">Sans jugement ni contrainte</p>
               </div>
               
-              <div className="bg-white/60 backdrop-blur-sm border border-green-100 rounded-xl p-4 hover:bg-white hover:shadow-lg transition-all duration-300 group">
+              <div className="bg-white border-2 border-green-200 rounded-xl p-4 hover:shadow-lg transition-all duration-300 group shadow-sm">
                 <div className="w-11 h-11 bg-gradient-to-br from-green-100 to-green-50 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
                   <Users className="w-5 h-5 text-green-600" />
                 </div>
@@ -122,7 +122,7 @@ const HomePage = () => {
                 <p className="text-xs text-gray-600">15 € de l'heure</p>
               </div>
               
-              <div className="bg-white/60 backdrop-blur-sm border border-green-100 rounded-xl p-4 hover:bg-white hover:shadow-lg transition-all duration-300 group">
+              <div className="bg-white border-2 border-green-200 rounded-xl p-4 hover:shadow-lg transition-all duration-300 group shadow-sm">
                 <div className="w-11 h-11 bg-gradient-to-br from-green-100 to-green-50 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
                   <MapPin className="w-5 h-5 text-green-600" />
                 </div>
