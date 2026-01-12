@@ -429,7 +429,7 @@ const HomePage = () => {
       </section>
 
       {/* AI Alternative Section */}
-      <section className="py-16 bg-gradient-to-br from-purple-50 via-white to-blue-50 relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-br from-purple-50/70 via-white/60 to-blue-50/70 relative overflow-hidden backdrop-blur-[2px]">
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-purple-200/20 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-blue-200/20 to-transparent rounded-full blur-3xl"></div>
