@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Loader2 } from 'lucide-react';
+import { ArrowLeft, Loader2, User, Users } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Input } from '../components/ui/input';
@@ -21,10 +21,20 @@ const ReservationPage = () => {
     prenom: '',
     email: '',
     telephone: '',
+    typeConsultation: 'seul',
     lieuPreference: 'presentiel',
     message: '',
     paiementMode: 'cb-online'
   });
+
+  // Calcul du prix en fonction du type de consultation
+  const getPrix = () => {
+    return formData.typeConsultation === 'duo' ? 30 : 15;
+  };
+
+  const getPrixAcompte = () => {
+    return formData.typeConsultation === 'duo' ? 30 : 15;
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
