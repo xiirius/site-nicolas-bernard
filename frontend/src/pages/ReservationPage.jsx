@@ -276,7 +276,7 @@ const ReservationPage = () => {
                       <RadioGroupItem value="cb-online" id="cb-online" className="mt-1" />
                       <div>
                         <Label htmlFor="cb-online" className="font-normal cursor-pointer">
-                          Paiement CB sécurisé en ligne avant la séance
+                          Paiement CB sécurisé en ligne avant la séance ({getPrix()} €)
                         </Label>
                         <p className="body-small text-gray-500 ml-0 mt-1">
                           Je vous enverrai un lien par e-mail ou SMS (Stripe, Lydia, SumUp...)
@@ -287,7 +287,7 @@ const ReservationPage = () => {
                       <RadioGroupItem value="acompte" id="acompte" className="mt-1" />
                       <div>
                         <Label htmlFor="acompte" className="font-normal cursor-pointer">
-                          Réservation en ligne (15 € d'acompte CB) + paiement complémentaire en espèces sur place
+                          Réservation en ligne ({getPrixAcompte()} € d'acompte CB) + paiement complémentaire en espèces sur place
                         </Label>
                         <p className="body-small text-gray-500 ml-0 mt-1">
                           Je vous envoie un lien pour verser l'acompte, le reste se fait dans la confiance lors de notre rencontre.
