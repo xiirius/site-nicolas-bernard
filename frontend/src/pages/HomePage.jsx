@@ -253,8 +253,7 @@ const HomePage = () => {
       </section>
 
       {/* Consultation Formats Section */}
-      <section className="py-16 bg-gradient-to-b from-white to-gray-50 relative">
-        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+      <section className="py-16 bg-gradient-to-b from-white/70 to-gray-50/60 relative backdrop-blur-[2px]">
         <div className="container mx-auto px-6 relative">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
