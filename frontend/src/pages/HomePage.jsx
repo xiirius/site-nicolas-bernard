@@ -480,42 +480,88 @@ const HomePage = () => {
       </section>
 
       {/* Conclusion */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-b from-white to-green-50">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="heading-1 mb-6">En résumé</h2>
-            <p className="body-large text-gray-700 leading-relaxed mb-8">
-              Mon espace est un lieu où vous êtes entendu, écouté, soutenu, sans jugement ni contrainte. Mon objectif est de vous permettre 
-              de retrouver l'énergie, de réaliser vos transitions sereinement et de cultiver votre bien-être à travers une écoute personnalisée, 
-              solidaire et incarnée.
-            </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <span className="text-xs uppercase tracking-wider text-green-600 font-semibold mb-3 block">Pour conclure</span>
+              <h2 className="heading-1 mb-3">En résumé</h2>
+              <div className="w-16 h-1 bg-green-500 mx-auto rounded-full"></div>
+            </div>
             
-            <Card className="bg-gray-50 border-gray-200">
-              <CardContent className="p-6">
-                <h3 className="heading-3 mb-3">En parallèle et "à venir":</h3>
-                <p className="body-medium text-gray-700 leading-relaxed mb-3">
-                  Par ailleurs, je suis en train de développer un projet confidentiel autour de l'écoute et du soin, destiné à valoriser les parcours 
-                  de vie des thérapeutes, des étudiants dans le soin et des patients.
-                </p>
-                <p className="body-medium text-gray-700 leading-relaxed font-medium">
-                  Une manière nouvelle de faire entendre l'humain et le soin.
-                </p>
-                <p className="body-small text-gray-600 mt-3">
-                  Je vous tiendrai informé en priorité !
-                </p>
+            {/* Main summary card */}
+            <Card className="bg-gradient-to-br from-green-50 to-white border-2 border-green-300 shadow-2xl mb-8 overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-400 via-green-500 to-green-600"></div>
+              <CardContent className="p-8 pt-10">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Heart className="w-7 h-7 text-green-600" />
+                  </div>
+                  <p className="body-large text-gray-700 leading-relaxed flex-1 pt-2">
+                    Mon espace est un lieu où vous êtes <strong className="text-green-700">entendu</strong>, <strong className="text-green-700">écouté</strong>, <strong className="text-green-700">soutenu</strong>, <strong>sans jugement ni contrainte</strong>. 
+                    Mon objectif est de vous permettre de retrouver <strong className="text-green-700">l'énergie</strong>, de réaliser vos <strong className="text-green-700">transitions sereinement</strong> et de cultiver votre 
+                    <strong className="text-green-700"> bien-être</strong> à travers une écoute <span className="font-semibold text-gray-800">personnalisée, solidaire et incarnée</span>.
+                  </p>
+                </div>
+                
+                {/* Key points grid */}
+                <div className="grid md:grid-cols-3 gap-4 mt-6">
+                  <div className="bg-white rounded-xl p-4 border-2 border-green-200 text-center hover:shadow-lg transition-shadow">
+                    <div className="text-3xl mb-2">👂</div>
+                    <p className="font-semibold text-green-800 text-sm">Écoute personnalisée</p>
+                  </div>
+                  <div className="bg-white rounded-xl p-4 border-2 border-green-200 text-center hover:shadow-lg transition-shadow">
+                    <div className="text-3xl mb-2">🤝</div>
+                    <p className="font-semibold text-green-800 text-sm">Accompagnement solidaire</p>
+                  </div>
+                  <div className="bg-white rounded-xl p-4 border-2 border-green-200 text-center hover:shadow-lg transition-shadow">
+                    <div className="text-3xl mb-2">💚</div>
+                    <p className="font-semibold text-green-800 text-sm">Présence incarnée</p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
             
-            <p className="body-large text-gray-700 mt-8">
-              À bientôt<br />
-              Nicolas
-            </p>
+            {/* Future project card */}
+            <Card className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 border-2 border-purple-200 shadow-lg relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-purple-200/30 rounded-full blur-2xl"></div>
+              <CardContent className="p-8 relative">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-2xl">🔮</span>
+                  </div>
+                  <div>
+                    <h3 className="heading-3 mb-3 text-purple-800">En parallèle et "à venir"</h3>
+                    <p className="body-medium text-gray-700 leading-relaxed mb-4">
+                      Par ailleurs, je suis en train de développer un <strong className="text-purple-700">projet confidentiel</strong> autour de l'écoute et du soin, destiné à valoriser les parcours 
+                      de vie des <strong className="text-purple-700">thérapeutes</strong>, des <strong className="text-purple-700">étudiants dans le soin</strong> et des <strong className="text-purple-700">patients</strong>.
+                    </p>
+                    <div className="bg-white/70 rounded-xl p-4 border border-purple-200 mb-4">
+                      <p className="body-medium font-semibold text-purple-800 text-center italic">
+                        Une manière nouvelle de faire entendre l'humain et le soin.
+                      </p>
+                    </div>
+                    <p className="body-small text-gray-600 italic">
+                      Je vous tiendrai informé en priorité !
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
             
-            <div className="mt-12">
+            {/* Signature */}
+            <div className="text-center mt-8">
+              <p className="text-lg text-gray-700 mb-2">À bientôt</p>
+              <p className="text-2xl font-semibold text-green-700">Nicolas</p>
+              <div className="w-24 h-px bg-gradient-to-r from-transparent via-green-400 to-transparent mx-auto mt-4"></div>
+            </div>
+            
+            {/* Final CTA */}
+            <div className="mt-12 text-center">
               <Link to="/reservation">
-                <Button className="btn-primary">
+                <Button className="btn-primary text-base px-10 py-4 shadow-2xl">
                   Réserver votre consultation
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
             </div>
