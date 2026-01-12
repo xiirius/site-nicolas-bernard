@@ -44,7 +44,7 @@ const HomePage = () => {
               Bienvenue dans mon espace d'accompagnement
             </h1>
             
-            <div className="w-20 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent mx-auto mb-6 opacity-40"></div>
+            <div className="w-40 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent mx-auto mb-6 opacity-60"></div>
             
             {/* Nicolas Bernard introduction - with frame */}
             <div className="max-w-3xl mx-auto mb-8 bg-white rounded-2xl border-2 border-green-200 p-6 shadow-md">
