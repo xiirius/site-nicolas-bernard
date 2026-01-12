@@ -165,7 +165,7 @@ const HomePage = () => {
                     </div>
                     <p className="body-medium text-gray-700 leading-relaxed flex-1">
                       En tant que <strong className="text-green-700">coach de santé, de vie et psychopraticien</strong>, ma mission est d'apporter un <strong className="text-green-700">soutien global</strong> à ceux qui en ont besoin, 
-                      <strong> sans jugement</strong> et <strong>sans contrainte</strong>. Ma démarche est fondée sur une <strong className="text-green-700">écoute incarnée</strong> et un <strong className="text-green-700">accompagnement laïc</strong>, o\u00f9 chaque individu 
+                      <strong> sans jugement</strong> et <strong>sans contrainte</strong>. Ma démarche est fondée sur une <strong className="text-green-700">écoute incarnée</strong> et un <strong className="text-green-700">accompagnement laïc</strong>, où chaque individu 
                       est vu dans sa <span className="font-semibold text-gray-800">globalité : émotionnelle, physique et mentale</span>.
                     </p>
                   </div>
