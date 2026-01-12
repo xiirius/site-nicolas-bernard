@@ -372,37 +372,106 @@ const HomePage = () => {
       </section>
 
       {/* AI Alternative Section */}
-      <section className="py-16 bg-green-50">
-        <div className="container mx-auto px-6">
+      <section className="py-16 bg-gradient-to-br from-purple-50 via-white to-blue-50 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-purple-200/20 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-blue-200/20 to-transparent rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl mx-auto">
-            <h2 className="heading-1 mb-6 text-center">Une alternative humaine, incarnée, à l'ère de l'IA</h2>
+            <div className="text-center mb-10">
+              <span className="text-xs uppercase tracking-wider text-purple-600 font-semibold mb-3 block">Humanité & Authenticité</span>
+              <h2 className="heading-1 mb-3">Une alternative humaine, incarnée, à l'ère de l'IA</h2>
+              <div className="w-16 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full"></div>
+            </div>
             
-            <div className="space-y-4 text-center">
-              <p className="body-medium text-gray-700 leading-relaxed">
-                Dans un monde où les réponses automatisées, les coachs virtuels et les interfaces émotionnelles pilotées par intelligence artificielle 
-                prennent de plus en plus de place, mon approche revendique avec force l'importance de la présence humaine réelle, imparfaite et sensible.
+            {/* Main statement */}
+            <Card className="mb-6 border-2 border-purple-200 shadow-xl bg-white/80 backdrop-blur-sm">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl">🤖</span>
+                  </div>
+                  <p className="body-large text-gray-700 leading-relaxed pt-2">
+                    Dans un monde où les <strong className="text-purple-700">réponses automatisées</strong>, les <strong className="text-purple-700">coachs virtuels</strong> et les interfaces émotionnelles pilotées par <strong className="text-purple-700">intelligence artificielle</strong> prennent de plus en plus de place, 
+                    mon approche revendique avec force l'importance de la <strong className="text-green-700">présence humaine réelle</strong>, imparfaite et sensible.
+                  </p>
+                </div>
+                
+                <div className="bg-gradient-to-r from-purple-100 via-blue-50 to-purple-100 rounded-2xl p-6 border-l-4 border-purple-500">
+                  <p className="text-xl font-semibold text-gray-800 mb-4 text-center">
+                    Ce que je propose n'est <strong className="text-purple-700">ni standardisé</strong>, <strong className="text-purple-700">ni préprogrammé</strong>.
+                  </p>
+                  <p className="body-medium text-gray-700 text-center italic">
+                    C'est un échange <strong>vivant</strong>, avec ses silences, ses hésitations, ses intuitions, ses résonances.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Comparison Grid */}
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
+              {/* IA Side */}
+              <Card className="bg-gradient-to-br from-gray-100 to-gray-50 border-2 border-gray-300 shadow-md">
+                <CardContent className="p-6">
+                  <div className="text-center mb-4">
+                    <div className="w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-3xl">🤖</span>
+                    </div>
+                    <h3 className="font-bold text-lg text-gray-700">L'Intelligence Artificielle</h3>
+                  </div>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <span className="text-gray-400 mt-1">•</span>
+                      <span className="text-sm text-gray-600">Simule l'empathie</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-gray-400 mt-1">•</span>
+                      <span className="text-sm text-gray-600">Traite une demande</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-gray-400 mt-1">•</span>
+                      <span className="text-sm text-gray-600">Répond avec des algorithmes</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Human Side */}
+              <Card className="bg-gradient-to-br from-green-100 to-blue-50 border-2 border-green-400 shadow-lg">
+                <CardContent className="p-6">
+                  <div className="text-center mb-4">
+                    <div className="w-14 h-14 bg-gradient-to-br from-green-200 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-3xl">👤</span>
+                    </div>
+                    <h3 className="font-bold text-lg text-green-800">Mon Accompagnement Humain</h3>
+                  </div>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 mt-1">✓</span>
+                      <span className="text-sm font-semibold text-green-800">J'incarne l'empathie</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 mt-1">✓</span>
+                      <span className="text-sm font-semibold text-green-800">Je reçois une personne</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 mt-1">✓</span>
+                      <span className="text-sm font-semibold text-green-800">Je me relie avec mon humanité</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Final statement */}
+            <div className="bg-gradient-to-r from-green-50 via-white to-blue-50 rounded-2xl p-8 border-2 border-green-300 shadow-lg text-center">
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                Je ne vous écoute pas <strong className="text-gray-800">à partir d'algorithmes</strong>, mais avec <strong className="text-green-700">mon vécu</strong>, <strong className="text-green-700">ma conscience</strong> et <strong className="text-green-700">ma propre humanité</strong>.
               </p>
-              
-              <p className="body-medium text-gray-700 leading-relaxed font-medium">
-                Ce que je propose n'est ni standardisé, ni préprogrammé.
-              </p>
-              
-              <p className="body-medium text-gray-700 leading-relaxed">
-                C'est un échange vivant, avec ses silences, ses hésitations, ses intuitions, ses résonances.
-              </p>
-              
-              <div className="bg-white p-6 rounded-lg shadow-sm my-6">
-                <p className="body-medium text-gray-700 leading-relaxed mb-2">
-                  Je ne vous écoute pas à partir d'algorithmes, mais avec mon vécu, ma conscience et ma propre humanité.
-                </p>
-                <p className="body-medium text-gray-700 leading-relaxed mb-2">
-                  Là où l'IA peut simuler l'empathie, je l'incarne.
-                </p>
-                <p className="body-medium text-gray-700 leading-relaxed mb-2">
-                  Là où elle traite une demande, je reçois une personne.
-                </p>
-                <p className="body-medium text-gray-700 leading-relaxed">
-                  Et là où elle "répond", moi, je me relie.
+              <div className="inline-block bg-white rounded-xl px-6 py-3 shadow-md border border-green-200">
+                <p className="text-base font-semibold text-green-800">
+                  Là où elle "répond", moi, je me <strong className="text-green-700 text-lg">relie</strong>.
                 </p>
               </div>
             </div>
