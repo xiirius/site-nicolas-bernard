@@ -6,11 +6,11 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f0f7f0;
+  background-color: #f8fcf8;
   position: relative;
 }
 
-/* Visible botanical pattern background */
+/* Pale green leaf pattern background */
 body::before {
   content: '';
   position: fixed;
@@ -18,19 +18,22 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
+  background-color: #f5faf5;
   background-image: 
-    url('/images/leaf-pattern.svg'),
-    radial-gradient(circle at 0% 0%, rgba(144, 190, 109, 0.35) 0%, transparent 50%),
-    radial-gradient(circle at 100% 100%, rgba(144, 190, 109, 0.30) 0%, transparent 50%),
-    radial-gradient(circle at 100% 0%, rgba(144, 190, 109, 0.20) 0%, transparent 40%),
-    radial-gradient(circle at 0% 100%, rgba(144, 190, 109, 0.20) 0%, transparent 40%);
+    /* Pale green ginkgo leaves - VISIBLE */
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><path d='M30 10 C12 30 12 55 30 70 C48 55 48 30 30 10 Z' fill='%23c8e6c9'/><line x1='30' y1='70' x2='30' y2='88' stroke='%23a5d6a7' stroke-width='2'/><path d='M75 40 C62 52 62 70 75 80 C88 70 88 52 75 40 Z' fill='%23d7f0d8'/><line x1='75' y1='80' x2='75' y2='95' stroke='%23b8e0b9' stroke-width='1.5'/></svg>"),
+    /* Corner gradients pale green */
+    radial-gradient(circle at 0% 0%, rgba(200, 230, 201, 0.6) 0%, transparent 40%),
+    radial-gradient(circle at 100% 100%, rgba(200, 230, 201, 0.5) 0%, transparent 40%),
+    radial-gradient(circle at 100% 0%, rgba(200, 230, 201, 0.4) 0%, transparent 35%),
+    radial-gradient(circle at 0% 100%, rgba(200, 230, 201, 0.4) 0%, transparent 35%);
   background-size: 100px 100px, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
   background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat;
   z-index: -2;
   pointer-events: none;
 }
 
-/* Decorative branch overlay */
+/* Additional scattered leaves overlay */
 body::after {
   content: '';
   position: fixed;
@@ -38,7 +41,8 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/images/branch-pattern.svg');
+  background-image: 
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'><path d='M160 30 C145 45 145 68 160 80 C175 68 175 45 160 30 Z' fill='%23d4edd5'/><path d='M40 120 C25 135 25 158 40 170 C55 158 55 135 40 120 Z' fill='%23c8e6c9'/><path d='M120 150 C110 160 110 175 120 182 C130 175 130 160 120 150 Z' fill='%23e0f2e1'/></svg>");
   background-size: 200px 200px;
   background-repeat: repeat;
   z-index: -1;
