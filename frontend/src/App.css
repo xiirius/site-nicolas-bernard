@@ -6,11 +6,11 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f5f9f5;
+  background-color: #f0f7f0;
   position: relative;
 }
 
-/* Very visible botanical pattern background */
+/* VERY VISIBLE botanical pattern background */
 body::before {
   content: '';
   position: fixed;
@@ -19,19 +19,20 @@ body::before {
   right: 0;
   bottom: 0;
   background-image: 
-    /* Large visible ginkgo leaves pattern */
-    url("data:image/svg+xml,%3Csvg width='120' height='120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 15 Q10 40 30 70 Q50 40 30 15' fill='%2390BE6D' fill-opacity='0.18' stroke='%237BAF5A' stroke-width='1.5' stroke-opacity='0.3'/%3E%3Cpath d='M30 70 L30 90' stroke='%237BAF5A' stroke-width='1.5' stroke-opacity='0.25'/%3E%3Cpath d='M85 50 Q70 70 85 95 Q100 70 85 50' fill='%2390BE6D' fill-opacity='0.12' stroke='%237BAF5A' stroke-width='1' stroke-opacity='0.2'/%3E%3Cpath d='M85 95 L85 110' stroke='%237BAF5A' stroke-width='1' stroke-opacity='0.18'/%3E%3C/svg%3E"),
-    /* Strong radial gradients in corners */
-    radial-gradient(ellipse 50% 50% at 0% 0%, rgba(144, 190, 109, 0.25) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 50% at 100% 100%, rgba(144, 190, 109, 0.20) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 100% 0%, rgba(144, 190, 109, 0.15) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 0% 100%, rgba(144, 190, 109, 0.15) 0%, transparent 60%);
-  background-size: 120px 120px, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+    /* BOLD ginkgo leaves - highly visible */
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 8 C10 25 10 45 25 55 C40 45 40 25 25 8 Z' fill='%2390BE6D' fill-opacity='0.25'/%3E%3Cline x1='25' y1='55' x2='25' y2='72' stroke='%2390BE6D' stroke-width='2' stroke-opacity='0.35'/%3E%3Cpath d='M60 35 C50 45 50 60 60 68 C70 60 70 45 60 35 Z' fill='%2390BE6D' fill-opacity='0.18'/%3E%3Cline x1='60' y1='68' x2='60' y2='78' stroke='%2390BE6D' stroke-width='1.5' stroke-opacity='0.25'/%3E%3C/svg%3E"),
+    /* Strong corner gradients */
+    radial-gradient(circle at 0% 0%, rgba(144, 190, 109, 0.35) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(144, 190, 109, 0.30) 0%, transparent 50%),
+    radial-gradient(circle at 100% 0%, rgba(144, 190, 109, 0.20) 0%, transparent 40%),
+    radial-gradient(circle at 0% 100%, rgba(144, 190, 109, 0.20) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(144, 190, 109, 0.08) 0%, transparent 60%);
+  background-size: 80px 80px, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
   z-index: -2;
   pointer-events: none;
 }
 
-/* Decorative branch overlay */
+/* Decorative branch overlay - more visible */
 body::after {
   content: '';
   position: fixed;
@@ -40,11 +41,11 @@ body::after {
   right: 0;
   bottom: 0;
   background-image: 
-    /* Visible curved branch with leaves */
-    url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 380 Q80 320 120 260 Q160 200 220 160 Q280 120 340 80 Q380 50 395 20' fill='none' stroke='%2390BE6D' stroke-width='2.5' stroke-opacity='0.2' stroke-linecap='round'/%3E%3Cpath d='M120 260 Q105 245 115 225 Q125 245 120 260' fill='%2390BE6D' fill-opacity='0.2'/%3E%3Cpath d='M220 160 Q200 150 210 125 Q220 150 220 160' fill='%2390BE6D' fill-opacity='0.18'/%3E%3Cpath d='M340 80 Q325 70 330 50 Q345 65 340 80' fill='%2390BE6D' fill-opacity='0.15'/%3E%3Cpath d='M380 400 Q320 340 280 290 Q240 240 200 210' fill='none' stroke='%2390BE6D' stroke-width='2' stroke-opacity='0.15' stroke-linecap='round'/%3E%3Cpath d='M280 290 Q265 280 270 260 Q285 275 280 290' fill='%2390BE6D' fill-opacity='0.15'/%3E%3C/svg%3E"),
-    /* Scattered small leaves */
-    url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M150 30 Q135 50 150 75 Q165 50 150 30' fill='%2390BE6D' fill-opacity='0.15'/%3E%3Cpath d='M40 140 Q25 160 40 185 Q55 160 40 140' fill='%2390BE6D' fill-opacity='0.12'/%3E%3Cpath d='M170 160 Q160 175 170 192 Q180 175 170 160' fill='%2390BE6D' fill-opacity='0.10'/%3E%3C/svg%3E");
-  background-size: 400px 400px, 200px 200px;
+    /* BOLD branch with leaves */
+    url("data:image/svg+xml,%3Csvg width='300' height='300' viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 280 Q60 240 100 200 Q140 160 180 130 Q220 100 260 70 Q280 55 295 30' fill='none' stroke='%2390BE6D' stroke-width='3' stroke-opacity='0.3' stroke-linecap='round'/%3E%3Cpath d='M100 200 C85 190 90 170 100 175 C105 190 100 200 100 200 Z' fill='%2390BE6D' fill-opacity='0.25'/%3E%3Cpath d='M180 130 C165 120 170 100 180 105 C185 120 180 130 180 130 Z' fill='%2390BE6D' fill-opacity='0.22'/%3E%3Cpath d='M260 70 C248 62 252 45 260 50 C265 62 260 70 260 70 Z' fill='%2390BE6D' fill-opacity='0.18'/%3E%3C/svg%3E"),
+    /* More scattered leaves */
+    url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M120 20 C105 35 105 55 120 65 C135 55 135 35 120 20 Z' fill='%2390BE6D' fill-opacity='0.20'/%3E%3Cpath d='M30 100 C18 112 18 130 30 138 C42 130 42 112 30 100 Z' fill='%2390BE6D' fill-opacity='0.18'/%3E%3Cpath d='M90 120 C82 128 82 140 90 145 C98 140 98 128 90 120 Z' fill='%2390BE6D' fill-opacity='0.12'/%3E%3C/svg%3E");
+  background-size: 300px 300px, 150px 150px;
   z-index: -1;
   pointer-events: none;
 }
