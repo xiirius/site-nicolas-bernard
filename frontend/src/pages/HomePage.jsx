@@ -124,7 +124,7 @@ const HomePage = () => {
       </section>
 
       {/* Approach Section */}
-      <section className="py-16 relative bg-gradient-to-b from-white to-gray-50">
+      <section className="py-16 relative bg-gradient-to-b from-white/70 to-gray-50/60 backdrop-blur-[2px]">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
