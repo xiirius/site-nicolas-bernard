@@ -310,18 +310,18 @@ const HomePage = () => {
             
             <div className="space-y-6">
               {/* Card 1 - Le constat */}
-              <Card className="bg-gradient-to-br from-orange-50 to-white border-l-4 border-l-orange-400 shadow-lg hover:shadow-xl transition-shadow">
+              <Card className="bg-gradient-to-br from-gray-50 to-white border-l-4 border-l-gray-400 shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                       <span className="text-2xl">⚠️</span>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg text-orange-800 mb-3">Le constat</h3>
+                      <h3 className="font-semibold text-lg text-gray-800 mb-3">Le constat</h3>
                       <p className="body-medium text-gray-700 leading-relaxed">
-                        Les <strong className="text-orange-700">étudiants</strong> et les <strong className="text-orange-700">adultes en reconversion professionnelle</strong> ou en <strong className="text-orange-700">parcours de soin</strong> sont des populations particulièrement <strong>fragiles</strong>. 
+                        Les <strong className="text-gray-800">étudiants</strong> et les <strong className="text-gray-800">adultes en reconversion professionnelle</strong> ou en <strong className="text-gray-800">parcours de soin</strong> sont des populations particulièrement <strong>fragiles</strong>. 
                         Ils traversent des périodes de transition où le <span className="font-semibold text-gray-800">stress, les doutes et les questionnements</span> sont omniprésents. Mais, malgré la 
-                        multiplication des offres de soins, beaucoup se retrouvent soit <strong className="text-orange-700">"pathologisés"</strong> soit démunis face à des solutions classiques qui ne 
+                        multiplication des offres de soins, beaucoup se retrouvent soit <strong className="text-gray-800">"pathologisés"</strong> soit démunis face à des solutions classiques qui ne 
                         répondent pas à leur besoin de <strong className="text-green-700">soutien moral</strong>.
                       </p>
                     </div>
