@@ -299,30 +299,73 @@ const HomePage = () => {
       </section>
 
       {/* Why Section */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-b from-white to-gray-50 relative">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="heading-1 mb-6">Pourquoi mon accompagnement répond à un besoin urgent et prioritaire ?</h2>
+            <div className="text-center mb-10">
+              <span className="text-xs uppercase tracking-wider text-green-600 font-semibold mb-3 block">Un besoin réel</span>
+              <h2 className="heading-1 mb-3">Pourquoi mon accompagnement répond à un besoin urgent et prioritaire ?</h2>
+              <div className="w-16 h-1 bg-green-500 mx-auto rounded-full"></div>
+            </div>
             
-            <div className="space-y-4">
-              <p className="body-medium text-gray-700 leading-relaxed">
-                Les étudiants et les adultes en reconversion professionnelle ou en parcours de soin sont des populations particulièrement fragiles. 
-                Ils traversent des périodes de transition où le stress, les doutes et les questionnements sont omniprésents. Mais, malgré la 
-                multiplication des offres de soins, beaucoup se retrouvent soit "pathologisés" soit démunis face à des solutions classiques qui ne 
-                répondent pas à leur besoin de soutien moral.
-              </p>
-              
-              <p className="body-medium text-gray-700 leading-relaxed">
-                Mon approche offre une réponse concrète à ce besoin de relance personnelle, avec un accompagnement adapté à chaque étape de votre 
-                parcours, qu'il s'agisse de retrouver un équilibre émotionnel, de gérer des périodes de stress intense, ou de réorienter sa vie professionnelle.
-              </p>
-              
-              <p className="body-medium text-gray-700 leading-relaxed">
-                Ce que j'apporte comme valeur ajoutée par rapport aux offres classiques, c'est avant tout la dimension humaine de l'accompagnement : 
-                je ne suis ni une machine, ni une solution rapide. Mon écoute est incarnée et adaptée à vos besoins, dans un cadre bienveillant, sans 
-                pression ni jugement. Mon rôle est d'être un soutien moral, un guide dans vos réflexions, et un catalyseur de changement pour vous aider 
-                à avancer dans la bonne direction.
-              </p>
+            <div className="space-y-6">
+              {/* Card 1 - Le constat */}
+              <Card className="bg-gradient-to-br from-orange-50 to-white border-l-4 border-l-orange-400 shadow-lg hover:shadow-xl transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-2xl">⚠️</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg text-orange-800 mb-3">Le constat</h3>
+                      <p className="body-medium text-gray-700 leading-relaxed">
+                        Les <strong className="text-orange-700">étudiants</strong> et les <strong className="text-orange-700">adultes en reconversion professionnelle</strong> ou en <strong className="text-orange-700">parcours de soin</strong> sont des populations particulièrement <strong>fragiles</strong>. 
+                        Ils traversent des périodes de transition où le <span className="font-semibold text-gray-800">stress, les doutes et les questionnements</span> sont omniprésents. Mais, malgré la 
+                        multiplication des offres de soins, beaucoup se retrouvent soit <strong className="text-orange-700">"pathologisés"</strong> soit démunis face à des solutions classiques qui ne 
+                        répondent pas à leur besoin de <strong className="text-green-700">soutien moral</strong>.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Card 2 - La réponse */}
+              <Card className="bg-gradient-to-br from-green-50 to-white border-l-4 border-l-green-500 shadow-lg hover:shadow-xl transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-2xl">✨</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg text-green-800 mb-3">Ma réponse concrète</h3>
+                      <p className="body-medium text-gray-700 leading-relaxed">
+                        Mon approche offre une <strong className="text-green-700">réponse concrète</strong> à ce besoin de <strong className="text-green-700">relance personnelle</strong>, avec un accompagnement adapté à <strong>chaque étape</strong> de votre 
+                        parcours, qu'il s'agisse de retrouver un <span className="font-semibold text-gray-800">équilibre émotionnel</span>, de gérer des périodes de <span className="font-semibold text-gray-800">stress intense</span>, ou de réorienter sa vie professionnelle.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Card 3 - La valeur ajoutée */}
+              <Card className="bg-gradient-to-br from-blue-50 to-white border-l-4 border-l-blue-400 shadow-lg hover:shadow-xl transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                      <Heart className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg text-blue-800 mb-3">La différence humaine</h3>
+                      <p className="body-medium text-gray-700 leading-relaxed">
+                        Ce que j'apporte comme <strong className="text-blue-700">valeur ajoutée</strong> par rapport aux offres classiques, c'est avant tout la <strong className="text-green-700">dimension humaine</strong> de l'accompagnement : 
+                        je ne suis <strong>ni une machine</strong>, <strong>ni une solution rapide</strong>. Mon écoute est <strong className="text-green-700">incarnée</strong> et <strong className="text-green-700">adaptée</strong> à vos besoins, dans un cadre <span className="font-semibold text-gray-800">bienveillant</span>, sans 
+                        pression ni jugement. Mon rôle est d'être un <strong className="text-blue-700">soutien moral</strong>, un <strong className="text-blue-700">guide</strong> dans vos réflexions, et un <strong className="text-blue-700">catalyseur de changement</strong> pour vous aider 
+                        à avancer dans la bonne direction.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
