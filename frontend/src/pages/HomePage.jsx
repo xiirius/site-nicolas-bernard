@@ -4,11 +4,30 @@ import { Heart, Users, MapPin, ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 
+// Leaf pattern SVG as background
+const leafPatternStyle = {
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  zIndex: 0,
+  pointerEvents: 'none',
+  backgroundImage: `
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M25 8 C10 25 10 45 25 58 C40 45 40 25 25 8 Z' fill='%23c8e6c9'/%3E%3Cpath d='M25 58 L25 72' stroke='%23a5d6a7' stroke-width='2'/%3E%3Cpath d='M60 30 C50 42 50 58 60 68 C70 58 70 42 60 30 Z' fill='%23d7f0d8'/%3E%3Cpath d='M60 68 L60 78' stroke='%23b8e0b9' stroke-width='1.5'/%3E%3C/svg%3E")
+  `,
+  backgroundSize: '80px 80px',
+  backgroundRepeat: 'repeat',
+};
+
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-transparent relative">
+      {/* Fixed leaf pattern background */}
+      <div style={leafPatternStyle}></div>
+      
       {/* Hero Section */}
-      <section className="hero-section">
+      <section className="hero-section relative z-10">
         {/* Decorative background elements */}
         <div className="hero-decoration hero-decoration-1"></div>
         <div className="hero-decoration hero-decoration-2"></div>
