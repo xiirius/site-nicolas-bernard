@@ -537,7 +537,7 @@ const HomePage = () => {
       </section>
 
       {/* Conclusion */}
-      <section className="py-16 bg-gradient-to-b from-white to-green-50">
+      <section className="py-16 bg-gradient-to-b from-white/70 to-green-50/60 backdrop-blur-[2px]">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
