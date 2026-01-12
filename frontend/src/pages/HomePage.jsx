@@ -46,10 +46,13 @@ const HomePage = () => {
             
             <div className="w-20 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent mx-auto mb-6 opacity-40"></div>
             
-            <p className="body-large text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Je suis <span className="font-semibold text-green-700">Nicolas Bernard</span>, thérapeute, coach de santé et de vie, ancien préparateur physique et éducateur spécialisé. 
-              Mon parcours, riche de <span className="font-semibold text-green-700">30 ans d'expérience</span>, m'a permis de développer une approche unique qui lie écoute, soutien moral et accompagnement holistique.
-            </p>
+            {/* Nicolas Bernard introduction - with frame */}
+            <div className="max-w-3xl mx-auto mb-8 bg-white rounded-2xl border-2 border-green-200 p-6 shadow-md">
+              <p className="body-large text-gray-700 leading-relaxed text-center">
+                Je suis <span className="font-semibold text-green-700">Nicolas Bernard</span>, thérapeute, coach de santé et de vie, ancien préparateur physique et éducateur spécialisé. 
+                Mon parcours, riche de <span className="font-semibold text-green-700">30 ans d'expérience</span>, m'a permis de développer une approche unique qui lie écoute, soutien moral et accompagnement holistique.
+              </p>
+            </div>
             
             {/* Introduction Text - Professional Design with Anise Green */}
             <div className="relative max-w-3xl mx-auto mb-8 group">
