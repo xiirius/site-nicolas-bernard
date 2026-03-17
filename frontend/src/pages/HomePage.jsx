@@ -477,7 +477,7 @@ const HomePage = () => {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-green-600 mt-1">✓</span>
-                      <span className="text-sm font-semibold text-green-800">Je me relie avec mon humanité</span>
+                      <span className="text-sm font-semibold text-green-800">Je me relie à vous avec mon humanité</span>
                     </li>
                   </ul>
                 </CardContent>
