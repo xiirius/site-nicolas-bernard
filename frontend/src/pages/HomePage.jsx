@@ -72,7 +72,7 @@ const HomePage = () => {
                 {/* Content */}
                 <div className="relative z-10">
                   <p className="text-lg text-gray-700 leading-relaxed mb-5 font-light italic">
-                    En tant que thérapeute engagé je vous propose une <span className="font-medium text-green-700 not-italic">écoute libre</span> et un accompagnement <span className="font-medium text-green-700 not-italic">sans pression</span>, 
+                    En tant que thérapeute solidaire je vous propose une <span className="font-medium text-green-700 not-italic">écoute libre</span> et un accompagnement <span className="font-medium text-green-700 not-italic">sans pression</span>, 
                     dans un cadre solidaire et respectueux.
                   </p>
                   
