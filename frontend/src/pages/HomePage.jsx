@@ -153,7 +153,7 @@ const HomePage = () => {
               {/* Card principale mission */}
               <Card className="bg-gradient-to-br from-green-50/80 via-white to-green-50/60 border-2 border-green-200 shadow-xl hover:shadow-2xl transition-all">
                 <CardContent className="p-8">
-                  <div className="flex items-start gap-4 mb-6">
+                  <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl">🌱</span>
                     </div>
@@ -161,13 +161,6 @@ const HomePage = () => {
                       En tant que <strong className="text-green-700">coach de santé, de vie et psychopraticien</strong>, ma mission est d'apporter un <strong className="text-green-700">soutien global</strong> à ceux qui en ont besoin, 
                       <strong> sans jugement</strong> et <strong>sans contrainte</strong>. Ma démarche est fondée sur une <strong className="text-green-700">écoute incarnée</strong> et un <strong className="text-green-700">accompagnement laïc</strong>, où chaque individu 
                       est vu dans sa <span className="font-semibold text-gray-800">globalité : émotionnelle, physique et mentale</span>.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-white/70 rounded-xl p-5 border-l-4 border-green-400 shadow-sm">
-                    <p className="body-small text-gray-600 italic leading-relaxed">
-                      <span className="font-semibold text-green-700">Une subtile alchimie</span> en fonction de vos besoins entre l'<strong>accompagnement sans jugement</strong>, un <strong>soutient moral</strong>, 
-                      une <strong>réorientation de votre trajectoire</strong>, un <strong>retour vers la vitalité</strong> moral et physique
                     </p>
                   </div>
                 </CardContent>
