@@ -200,7 +200,7 @@ const HomePage = () => {
                     </div>
                     
                     <p className="body-medium text-gray-700 leading-relaxed">
-                      Ma mission est de vous <strong className="text-green-700">soutenir</strong> dans vos réflexions et de vous offrir un <strong className="text-blue-700">espace d'expression et de détente</strong>. 
+                      Ma mission est de vous <strong className="text-green-700">soutenir</strong> dans vos préoccupations et de vous offrir un <strong className="text-blue-700">espace d'expression et de détente</strong>. 
                       Mon travail est celui d'un <strong className="text-green-700">coach de santé et de vie</strong> dans toute sa profondeur, pour ceux 
                       qui sont à la recherche d'un <strong className="text-green-700">soutien moral</strong>, <strong className="text-green-700">émotionnel</strong> et pour avancer sereinement. 
                       <span className="italic">L'écoute est ici un <strong className="text-green-700">soin relationnel</strong>, <strong className="text-green-700">spirituel</strong>, profondément apaisant.</span>
