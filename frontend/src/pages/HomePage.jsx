@@ -175,8 +175,7 @@ const HomePage = () => {
                     </div>
                     <p className="body-medium text-gray-700 leading-relaxed">
                       Je crois profondément en l'importance de la <strong className="text-blue-700">relance personnelle</strong> et du <strong className="text-blue-700">réancrage</strong>, que ce soit dans le cadre d'une <span className="font-semibold text-gray-800">reconversion 
-                      personnelle</span>, d'un <span className="font-semibold text-gray-800">professionnel de soin</span>, ou simplement dans l'envie de retrouver une <strong className="text-green-700">vitalité perdue</strong>. Je vous guide sur le 
-                      chemin de la <strong className="text-green-700">conscience de soi</strong>, du <strong className="text-green-700">bien-être mental</strong> et de l'<strong className="text-green-700">épanouissement personnel</strong>.
+                      personnelle</span>, d'un <span className="font-semibold text-gray-800">parcours de soin</span>, ou simplement dans l'envie de retrouver une <strong className="text-green-700">vitalité perdue</strong>.
                     </p>
                   </div>
                 </CardContent>
