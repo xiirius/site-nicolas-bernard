@@ -71,14 +71,8 @@ const HomePage = () => {
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-5">
-                    <div className="w-12 h-0.5 bg-gradient-to-r from-green-400 to-green-200 rounded-full"></div>
-                    <span className="text-xs uppercase tracking-widest text-green-600 font-semibold">Mon engagement</span>
-                  </div>
-                  
                   <p className="text-lg text-gray-700 leading-relaxed mb-5 font-light italic">
-                    Ce site est un espace d'<span className="font-medium text-green-700 not-italic">écoute libre</span>, de guidance et de réancrage personnel. 
-                    En tant que thérapeute engagé, je vous propose un accompagnement <span className="font-medium text-green-700 not-italic">sans pression</span>, 
+                    En tant que thérapeute engagé je vous propose une <span className="font-medium text-green-700 not-italic">écoute libre</span> et un accompagnement <span className="font-medium text-green-700 not-italic">sans pression</span>, 
                     dans un cadre solidaire et respectueux.
                   </p>
                   
@@ -90,7 +84,7 @@ const HomePage = () => {
                     </div>
                     <p className="text-base text-gray-700 leading-relaxed font-light">
                       Vous y trouverez un <span className="font-medium text-green-700">soutien moral essentiel</span>, particulièrement si vous traversez une période de transition, 
-                      si vous êtes étudiant ou adulte en reconversion, ou si vous êtes en parcours de soin.
+                      si vous êtes étudiant ou adulte en reconversion, si vous êtes en parcours de soin ou si vous êtes tout simplement en quête de sens, d'équilibre ou de redécouverte de vous-même.
                     </p>
                   </div>
                   
