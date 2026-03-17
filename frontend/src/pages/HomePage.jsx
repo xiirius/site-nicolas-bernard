@@ -280,7 +280,8 @@ const HomePage = () => {
                       <span className="text-xs bg-orange-100 text-orange-700 px-2.5 py-1 rounded-full font-medium">Flexible</span>
                       <p className="body-small text-gray-600 mt-3 mb-3">
                         Je vous offre également la possibilité de vous rencontrer là où vous vous sentez bien. Que ce soit dans un café, 
-                        dans un lieu calme, ou même chez vous, je viens à votre rencontre.
+                        dans un lieu calme, ou même chez vous, je viens à votre rencontre. 
+                        Ce format est parfait pour ceux qui souhaitent un accompagnement discret et flexible.
                       </p>
                       <div className="flex items-center gap-2 mt-4">
                         <div className="w-8 h-px bg-orange-300"></div>
