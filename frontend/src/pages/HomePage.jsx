@@ -182,54 +182,6 @@ const HomePage = () => {
               </Card>
             </div>
 
-            {/* Valeurs fondamentales */}
-            <Card className="bg-white border-2 border-green-300 shadow-2xl overflow-hidden mb-8">
-              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-400 via-green-500 to-green-600"></div>
-              <CardContent className="p-8 pt-10">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                    <Heart className="w-6 h-6 text-green-600" />
-                  </div>
-                  <h3 className="heading-3 text-green-800">Mes valeurs fondamentales</h3>
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4 group hover:translate-x-1 transition-transform">
-                    <div className="w-10 h-10 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform shadow-md">
-                      <span className="text-green-700 font-bold text-lg">1</span>
-                    </div>
-                    <div className="flex-1">
-                      <p className="body-medium text-gray-700 pt-2 leading-relaxed">
-                        <strong className="text-green-700">L'écoute active</strong> et l'accompagnement dans une <strong className="text-green-700">démarche solidaire</strong>
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4 group hover:translate-x-1 transition-transform">
-                    <div className="w-10 h-10 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform shadow-md">
-                      <span className="text-blue-700 font-bold text-lg">2</span>
-                    </div>
-                    <div className="flex-1">
-                      <p className="body-medium text-gray-700 pt-2 leading-relaxed">
-                        <strong className="text-blue-700">L'authenticité</strong> de la relation et la <strong className="text-blue-700">confiance</strong>
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4 group hover:translate-x-1 transition-transform">
-                    <div className="w-10 h-10 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform shadow-md">
-                      <span className="text-purple-700 font-bold text-lg">3</span>
-                    </div>
-                    <div className="flex-1">
-                      <p className="body-medium text-gray-700 pt-2 leading-relaxed">
-                        <strong className="text-purple-700">L'engagement humain</strong> et la <strong className="text-purple-700">transparence</strong>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
             {/* Card conclusion "confesseur laïc" */}
             <Card className="bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 border-2 border-green-200 shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-40 h-40 bg-green-200/20 rounded-full blur-3xl"></div>
