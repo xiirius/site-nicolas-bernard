@@ -235,7 +235,8 @@ const HomePage = () => {
                       <span className="text-xs bg-green-100 text-green-700 px-2.5 py-1 rounded-full font-medium">Temps libre</span>
                       <p className="body-small text-gray-600 mt-3 mb-3">
                         Dans cette formule, vous avez la possibilité de bénéficier d'un accompagnement sans contrainte de temps. 
-                        La durée de la rencontre peut varier entre 30 minutes et 2 heures, selon vos besoins.
+                        La durée de la rencontre peut varier entre 30 minutes et 2 heures, selon vos besoins. 
+                        Il s'agit d'un moment d'échange et d'écoute flexible, permettant d'aborder vos préoccupations en toute liberté.
                       </p>
                       <div className="flex items-center gap-2 mt-4">
                         <div className="w-8 h-px bg-green-300"></div>
