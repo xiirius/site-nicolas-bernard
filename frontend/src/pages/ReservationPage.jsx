@@ -174,50 +174,49 @@ const ReservationPage = () => {
                 {/* Type de consultation: Seul ou Duo */}
                 <div className="space-y-3">
                   <Label>Type de consultation *</Label>
-                  <RadioGroup
-                    value={formData.typeConsultation}
-                    onValueChange={(value) => handleRadioChange('typeConsultation', value)}
-                    className="grid grid-cols-2 gap-4"
-                  >
-                    <div 
+                  <div className="grid grid-cols-2 gap-4">
+                    <button
+                      type="button"
+                      onClick={() => setFormData(prev => ({ ...prev, typeConsultation: 'seul' }))}
                       className={`relative flex flex-col items-center p-4 rounded-xl border-2 cursor-pointer transition-all ${
                         formData.typeConsultation === 'seul' 
                           ? 'border-green-500 bg-green-50' 
                           : 'border-gray-200 bg-white hover:border-green-300'
                       }`}
-                      onClick={() => handleRadioChange('typeConsultation', 'seul')}
                     >
-                      <RadioGroupItem value="seul" id="seul" className="sr-only" />
                       <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 ${
                         formData.typeConsultation === 'seul' ? 'bg-green-100' : 'bg-gray-100'
                       }`}>
                         <User className={`w-6 h-6 ${formData.typeConsultation === 'seul' ? 'text-green-600' : 'text-gray-500'}`} />
                       </div>
-                      <Label htmlFor="seul" className="font-semibold text-gray-800 cursor-pointer">
+                      <span className="font-semibold text-gray-800">
                         Consultation seul(e)
-                      </Label>
+                      </span>
                       <p className="text-lg font-bold text-green-600 mt-1">15 € / heure</p>
-                    </div>
+                    </button>
                     
-                    <div 
+                    <button
+                      type="button"
+                      onClick={() => setFormData(prev => ({ ...prev, typeConsultation: 'duo' }))}
                       className={`relative flex flex-col items-center p-4 rounded-xl border-2 cursor-pointer transition-all ${
                         formData.typeConsultation === 'duo' 
                           ? 'border-green-500 bg-green-50' 
                           : 'border-gray-200 bg-white hover:border-green-300'
                       }`}
-                      onClick={() => handleRadioChange('typeConsultation', 'duo')}
                     >
-                      <RadioGroupItem value="duo" id="duo" className="sr-only" />
                       <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 ${
                         formData.typeConsultation === 'duo' ? 'bg-green-100' : 'bg-gray-100'
                       }`}>
                         <Users className={`w-6 h-6 ${formData.typeConsultation === 'duo' ? 'text-green-600' : 'text-gray-500'}`} />
                       </div>
-                      <Label htmlFor="duo" className="font-semibold text-gray-800 cursor-pointer">
+                      <span className="font-semibold text-gray-800">
                         Consultation en duo
-                      </Label>
+                      </span>
                       <p className="text-lg font-bold text-green-600 mt-1">30 € / heure</p>
                       <p className="text-xs text-gray-500">(15 € par personne)</p>
+                    </button>
+                  </div>
+                </div>
                     </div>
                   </RadioGroup>
                 </div>
