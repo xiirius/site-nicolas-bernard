@@ -217,9 +217,6 @@ const ReservationPage = () => {
                     </button>
                   </div>
                 </div>
-                    </div>
-                  </RadioGroup>
-                </div>
 
                 {/* Location Preference */}
                 <div className="space-y-3">
