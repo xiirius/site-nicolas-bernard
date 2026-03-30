@@ -1,6 +1,5 @@
 from fastapi import APIRouter, Request, HTTPException
 from emergentintegrations.payments.stripe.checkout import StripeCheckout
-from email_service import send_confirmation_email, EmailDeliveryError
 import os
 from datetime import datetime
 
@@ -71,22 +70,7 @@ async def stripe_webhook(request: Request):
                         "updatedAt": datetime.utcnow()
                     }}
                 )
-                
-                # Envoyer l'email de confirmation (si pas déjà envoyé)
-                if not reservation.get("emailSent", False):
-                    try:
-                        email_sent = send_confirmation_email(reservation)
-                        if email_sent:
-                            await db.reservations.update_one(
-                                {"id": reservation_id},
-                                {"$set": {
-                                    "emailSent": True,
-                                    "updatedAt": datetime.utcnow()
-                                }}
-                            )
-                            print(f"Email de confirmation envoyé à {reservation['email']}")
-                    except EmailDeliveryError as e:
-                        print(f"Erreur envoi email: {str(e)}")
+                print(f"Paiement confirmé pour {reservation['email']}")
         
         return {
             "success": True,
