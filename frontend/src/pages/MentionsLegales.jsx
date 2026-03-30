@@ -119,6 +119,7 @@ const MentionsLegales = () => {
             <p className="text-gray-700 leading-relaxed">
               Les paiements en ligne sont sécurisés par la plateforme Stripe, leader mondial du paiement en ligne. 
               Vos informations bancaires sont cryptées et ne sont jamais stockées sur nos serveurs.
+              Après paiement, vous recevrez une confirmation directement par Stripe.
             </p>
           </section>
 
