@@ -590,10 +590,10 @@ const HomePage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
+      <footer className="bg-gray-800 text-white py-10 relative z-10">
         <div className="container mx-auto px-6 text-center">
-          <p className="body-small">© 2025 Nicolas Bernard - Thérapeute & Coach de Santé et de Vie</p>
-          <p className="caption mt-2 text-gray-400">Accompagnement bienveillant et solidaire</p>
+          <p className="text-lg font-medium text-white mb-2">© 2025 Nicolas Bernard - Thérapeute & Coach de Santé et de Vie</p>
+          <p className="text-base text-gray-300">Accompagnement bienveillant et solidaire</p>
         </div>
       </footer>
     </div>
