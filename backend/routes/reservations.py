@@ -7,7 +7,6 @@ from emergentintegrations.payments.stripe.checkout import (
     CheckoutStatusResponse
 )
 from models import ReservationCreate, Reservation, PaymentTransaction
-from email_service import send_confirmation_email, EmailDeliveryError
 import os
 from datetime import datetime
 
@@ -18,8 +17,10 @@ from server import db
 
 # Tarifs fixes (sécurité: montants définis côté backend)
 TARIFS = {
-    "acompte": 15.0,  # Acompte fixe
-    "consultation_heure": 15.0  # Tarif horaire
+    "seul": 15.0,       # Consultation seul
+    "duo": 30.0,        # Consultation duo
+    "acompte_seul": 15.0,  # Acompte seul
+    "acompte_duo": 30.0    # Acompte duo
 }
 
 @router.post("/create-checkout-session")
@@ -28,11 +29,13 @@ async def create_checkout_session(reservation: ReservationCreate, request: Reque
     Crée une session de paiement Stripe et enregistre la réservation
     """
     try:
-        # 1. Déterminer le montant (défini côté backend pour sécurité)
-        if reservation.paiementMode == "acompte":
-            montant = TARIFS["acompte"]
-        else:  # cb-online
-            montant = TARIFS["consultation_heure"]
+        # 1. Déterminer le montant selon type de consultation
+        type_consultation = getattr(reservation, 'typeConsultation', 'seul')
+        
+        if type_consultation == "duo":
+            montant = TARIFS["duo"]
+        else:
+            montant = TARIFS["seul"]
         
         # 2. Obtenir l'URL frontend depuis le header Origin
         origin_url = request.headers.get("origin", os.getenv('FRONTEND_URL', 'http://localhost:3000'))
@@ -72,7 +75,8 @@ async def create_checkout_session(reservation: ReservationCreate, request: Reque
                 "reservation_id": reservation_obj.id,
                 "customer_name": f"{reservation.prenom} {reservation.nom}",
                 "customer_email": reservation.email,
-                "payment_mode": reservation.paiementMode
+                "payment_mode": reservation.paiementMode,
+                "type_consultation": type_consultation
             }
         )
         
@@ -158,21 +162,7 @@ async def get_checkout_status(session_id: str, request: Request):
                         "updatedAt": datetime.utcnow()
                     }}
                 )
-                
-                # Envoyer l'email de confirmation (si pas déjà envoyé)
-                if not reservation.get("emailSent", False):
-                    try:
-                        email_sent = send_confirmation_email(reservation)
-                        if email_sent:
-                            await db.reservations.update_one(
-                                {"id": reservation_id},
-                                {"$set": {
-                                    "emailSent": True,
-                                    "updatedAt": datetime.utcnow()
-                                }}
-                            )
-                    except EmailDeliveryError as e:
-                        print(f"Erreur envoi email: {str(e)}")
+                print(f"Paiement confirmé pour {reservation['email']}")
         
         return {
             "success": True,
@@ -210,8 +200,7 @@ async def reservation_success(session_id: str):
                 "nom": reservation["nom"],
                 "prenom": reservation["prenom"],
                 "email": reservation["email"],
-                "paiementStatus": reservation["stripePaymentStatus"],
-                "emailSent": reservation.get("emailSent", False)
+                "paiementStatus": reservation["stripePaymentStatus"]
             }
         }
         
