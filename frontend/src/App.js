@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import ReservationPage from './pages/ReservationPage';
 import ReservationSuccessPage from './pages/ReservationSuccessPage';
 import CancelPage from './pages/CancelPage';
+import MentionsLegales from './pages/MentionsLegales';
 import { Toaster } from './components/ui/sonner';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/reservation" element={<ReservationPage />} />
           <Route path="/reservation/success" element={<ReservationSuccessPage />} />
           <Route path="/cancel" element={<CancelPage />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
         </Routes>
       </BrowserRouter>
       <Toaster />
