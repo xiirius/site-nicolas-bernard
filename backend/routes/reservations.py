@@ -1,12 +1,7 @@
 from fastapi import APIRouter, HTTPException, Request
 from motor.motor_asyncio import AsyncIOMotorClient
-from emergentintegrations.payments.stripe.checkout import (
-    StripeCheckout,
-    CheckoutSessionRequest,
-    CheckoutSessionResponse,
-    CheckoutStatusResponse
-)
 from models import ReservationCreate, Reservation, PaymentTransaction
+import stripe
 import os
 from datetime import datetime
 
@@ -15,12 +10,13 @@ router = APIRouter(prefix="/api/reservations", tags=["reservations"])
 # MongoDB will be injected via dependency
 from server import db
 
+# Initialize Stripe
+stripe.api_key = os.getenv('STRIPE_API_KEY')
+
 # Tarifs fixes (sécurité: montants définis côté backend)
 TARIFS = {
     "seul": 15.0,       # Consultation seul
     "duo": 30.0,        # Consultation duo
-    "acompte_seul": 15.0,  # Acompte seul
-    "acompte_duo": 30.0    # Acompte duo
 }
 
 @router.post("/create-checkout-session")
@@ -53,24 +49,25 @@ async def create_checkout_session(reservation: ReservationCreate, request: Reque
         )
         
         result = await db.reservations.insert_one(reservation_obj.dict())
-        reservation_id = str(result.inserted_id)
         
-        # 5. Initialiser Stripe Checkout
-        stripe_api_key = os.getenv('STRIPE_API_KEY')
-        host_url = str(request.base_url)
-        webhook_url = f"{host_url}api/webhooks/stripe"
-        
-        stripe_checkout = StripeCheckout(
-            api_key=stripe_api_key,
-            webhook_url=webhook_url
-        )
-        
-        # 6. Créer la session de paiement Stripe
-        checkout_request = CheckoutSessionRequest(
-            amount=montant,
-            currency="eur",
+        # 5. Créer la session de paiement Stripe
+        session = stripe.checkout.Session.create(
+            payment_method_types=['card'],
+            line_items=[{
+                'price_data': {
+                    'currency': 'eur',
+                    'unit_amount': int(montant * 100),  # Stripe utilise les centimes
+                    'product_data': {
+                        'name': f'Consultation {"en duo" if type_consultation == "duo" else "individuelle"}',
+                        'description': f'Séance avec Nicolas Bernard - Thérapeute',
+                    },
+                },
+                'quantity': 1,
+            }],
+            mode='payment',
             success_url=success_url,
             cancel_url=cancel_url,
+            customer_email=reservation.email,
             metadata={
                 "reservation_id": reservation_obj.id,
                 "customer_name": f"{reservation.prenom} {reservation.nom}",
@@ -80,33 +77,34 @@ async def create_checkout_session(reservation: ReservationCreate, request: Reque
             }
         )
         
-        session: CheckoutSessionResponse = await stripe_checkout.create_checkout_session(checkout_request)
-        
-        # 7. Créer l'entrée de transaction de paiement
+        # 6. Créer l'entrée de transaction de paiement
         payment_transaction = PaymentTransaction(
-            session_id=session.session_id,
+            session_id=session.id,
             amount=montant,
             currency="eur",
             payment_status="pending",
             reservation_id=reservation_obj.id,
             customer_email=reservation.email,
-            metadata=checkout_request.metadata
+            metadata={
+                "reservation_id": reservation_obj.id,
+                "customer_name": f"{reservation.prenom} {reservation.nom}",
+            }
         )
         
         await db.payment_transactions.insert_one(payment_transaction.dict())
         
-        # 8. Mettre à jour la réservation avec le session_id
+        # 7. Mettre à jour la réservation avec le session_id
         await db.reservations.update_one(
             {"id": reservation_obj.id},
             {"$set": {
-                "stripeSessionId": session.session_id,
+                "stripeSessionId": session.id,
                 "updatedAt": datetime.utcnow()
             }}
         )
         
         return {
             "success": True,
-            "sessionId": session.session_id,
+            "sessionId": session.id,
             "sessionUrl": session.url,
             "reservationId": reservation_obj.id
         }
@@ -120,18 +118,8 @@ async def get_checkout_status(session_id: str, request: Request):
     Vérifie le statut d'une session de paiement Stripe
     """
     try:
-        # Initialiser Stripe Checkout
-        stripe_api_key = os.getenv('STRIPE_API_KEY')
-        host_url = str(request.base_url)
-        webhook_url = f"{host_url}api/webhooks/stripe"
-        
-        stripe_checkout = StripeCheckout(
-            api_key=stripe_api_key,
-            webhook_url=webhook_url
-        )
-        
         # Récupérer le statut depuis Stripe
-        status: CheckoutStatusResponse = await stripe_checkout.get_checkout_status(session_id)
+        session = stripe.checkout.Session.retrieve(session_id)
         
         # Vérifier si le paiement est déjà traité
         existing_transaction = await db.payment_transactions.find_one({"session_id": session_id})
@@ -140,7 +128,7 @@ async def get_checkout_status(session_id: str, request: Request):
             raise HTTPException(status_code=404, detail="Transaction non trouvée")
         
         # Si le paiement est complété et pas encore traité
-        if status.payment_status == "paid" and existing_transaction["payment_status"] != "completed":
+        if session.payment_status == "paid" and existing_transaction["payment_status"] != "completed":
             # Mettre à jour la transaction
             await db.payment_transactions.update_one(
                 {"session_id": session_id},
@@ -166,10 +154,10 @@ async def get_checkout_status(session_id: str, request: Request):
         
         return {
             "success": True,
-            "status": status.status,
-            "payment_status": status.payment_status,
-            "amount_total": status.amount_total,
-            "currency": status.currency
+            "status": session.status,
+            "payment_status": session.payment_status,
+            "amount_total": session.amount_total,
+            "currency": session.currency
         }
         
     except Exception as e:
