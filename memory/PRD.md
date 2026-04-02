@@ -30,7 +30,7 @@ Site professionnel de thérapie pour Nicolas Bernard, construit pour un freelanc
 - [x] Typographie Cormorant Garamond (weight 500)
 - [x] Cadres décoratifs sur TOUS les titres (y compris hero)
 - [x] Couleurs violet pâles sur tout le site
-- [x] Fond continu sans séparation (sauf "En résumé")
+- [x] Fond continu flouté (backdrop-blur 8px) sur toute la page (sauf "En résumé")
 - [x] Page de réservation avec tarification Seul/En duo + Stripe Checkout
 - [x] Page Mentions Légales
 - [x] Footer avec lien Mentions Légales

@@ -145,7 +145,7 @@ const HomePage = () => {
       </section>
 
       {/* Approach Section */}
-      <section className="py-16 relative">
+      <section className="py-16 relative backdrop-blur-[8px]">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             {/* Section Title with elegant frame */}
@@ -227,7 +227,7 @@ const HomePage = () => {
       </section>
 
       {/* Consultation Formats Section */}
-      <section className="py-16 relative">
+      <section className="py-16 relative backdrop-blur-[8px]">
         <div className="container mx-auto px-6 relative">
           <div className="max-w-5xl mx-auto">
             {/* Section Title with elegant frame */}
@@ -340,7 +340,7 @@ const HomePage = () => {
       </section>
 
       {/* Why Section */}
-      <section className="py-16 relative">
+      <section className="py-16 relative backdrop-blur-[8px]">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             {/* Section Title with elegant frame */}
@@ -421,7 +421,7 @@ const HomePage = () => {
       </section>
 
       {/* AI Alternative Section */}
-      <section className="py-16 relative overflow-hidden">
+      <section className="py-16 relative overflow-hidden backdrop-blur-[8px]">
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-purple-200/20 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-blue-200/20 to-transparent rounded-full blur-3xl"></div>
