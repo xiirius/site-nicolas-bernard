@@ -203,7 +203,7 @@ body::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 1.5rem 3rem;
+  padding: 4rem 1.5rem 1rem;
   position: relative;
 }
 

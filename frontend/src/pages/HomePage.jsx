@@ -34,7 +34,7 @@ const HomePage = () => {
         <div className="hero-decoration hero-decoration-2"></div>
         <div className="hero-decoration hero-decoration-3"></div>
         
-        <div className="container mx-auto px-6 py-16 relative z-10">
+        <div className="container mx-auto px-6 pt-8 pb-2 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-white border border-green-200 rounded-full px-5 py-2.5 mb-6 shadow-sm">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
