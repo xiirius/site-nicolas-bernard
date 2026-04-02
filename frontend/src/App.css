@@ -31,6 +31,7 @@ body::before {
   background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat;
   z-index: -2;
   pointer-events: none;
+  filter: blur(8px);
 }
 
 /* Additional scattered leaves overlay */
@@ -47,6 +48,7 @@ body::after {
   background-repeat: repeat;
   z-index: -1;
   pointer-events: none;
+  filter: blur(8px);
 }
 
 /* Color System - Green & White Theme */
