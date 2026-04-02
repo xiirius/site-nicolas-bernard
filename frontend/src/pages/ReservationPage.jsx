@@ -328,9 +328,13 @@ const ReservationPage = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 mt-12">
+      <footer className="bg-gray-800 text-white py-10 mt-12">
         <div className="container mx-auto px-6 text-center">
-          <p className="body-small">© 2025 Nicolas Bernard - Thérapeute & Coach de Santé et de Vie</p>
+          <p className="text-lg font-medium text-white mb-2">© 2025 Nicolas Bernard - Thérapeute & Coach de Santé et de Vie</p>
+          <p className="text-base text-gray-300 mb-4">Accompagnement bienveillant et solidaire</p>
+          <Link to="/mentions-legales" className="text-sm text-gray-400 hover:text-white transition-colors underline">
+            Mentions légales
+          </Link>
         </div>
       </footer>
     </div>
