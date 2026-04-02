@@ -324,16 +324,6 @@ const ReservationPage = () => {
               </form>
             </CardContent>
           </Card>
-
-          {/* Contact Info Placeholder */}
-          <div className="mt-8 text-center">
-            <p className="body-small text-gray-600">
-              Envoyer à : <span className="font-medium">[votre adresse email]</span>
-            </p>
-            <p className="body-small text-gray-600 mt-1">
-              Ou par SMS : <span className="font-medium">[votre numéro]</span>
-            </p>
-          </div>
         </div>
       </div>
 
