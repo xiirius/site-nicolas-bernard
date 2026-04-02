@@ -336,10 +336,18 @@ const HomePage = () => {
       <section className="py-16 bg-gradient-to-b from-white/70 to-gray-50/60 relative backdrop-blur-[2px]">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
-              <span className="text-xs uppercase tracking-wider text-green-600 font-semibold mb-3 block">Un besoin réel</span>
-              <h2 className="heading-1 mb-3">Pourquoi mon accompagnement répond à un besoin urgent et prioritaire ?</h2>
-              <div className="w-16 h-1 bg-green-500 mx-auto rounded-full"></div>
+            {/* Section Title with elegant frame */}
+            <div className="text-center mb-10 relative">
+              <div className="inline-block relative px-8 py-4">
+                {/* Decorative corners */}
+                <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-green-400 rounded-tl-lg"></div>
+                <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-green-400 rounded-tr-lg"></div>
+                <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-green-400 rounded-bl-lg"></div>
+                <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-green-400 rounded-br-lg"></div>
+                
+                <span className="text-xs uppercase tracking-wider text-green-600 font-medium mb-2 block">Un besoin réel</span>
+                <h2 className="heading-1 mb-0">Pourquoi mon accompagnement répond à un besoin urgent et prioritaire ?</h2>
+              </div>
             </div>
             
             <div className="space-y-6">
