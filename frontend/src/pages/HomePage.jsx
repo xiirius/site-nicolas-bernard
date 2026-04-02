@@ -133,8 +133,6 @@ const HomePage = () => {
                 </Button>
               </Link>
             </div>
-            
-            <p className="text-sm text-gray-500 italic">Première consultation sans engagement</p>
           </div>
         </div>
       </section>
