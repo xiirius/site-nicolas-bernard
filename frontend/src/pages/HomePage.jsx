@@ -40,9 +40,16 @@ const HomePage = () => {
               <span className="text-sm font-medium text-gray-700">Accompagnement bienveillant</span>
             </div>
             
-            <h1 className="heading-hero mb-5">
-              Bienvenue dans mon espace d'accompagnement
-            </h1>
+            <div className="inline-block relative px-10 py-5 mb-5">
+              {/* Decorative corners */}
+              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-green-400 rounded-tl-lg"></div>
+              <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-green-400 rounded-tr-lg"></div>
+              <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-green-400 rounded-bl-lg"></div>
+              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-green-400 rounded-br-lg"></div>
+              <h1 className="heading-hero mb-0">
+                Bienvenue dans mon espace d'accompagnement
+              </h1>
+            </div>
             
             <div className="w-40 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent mx-auto mb-6 opacity-60"></div>
             
@@ -138,7 +145,7 @@ const HomePage = () => {
       </section>
 
       {/* Approach Section */}
-      <section className="py-16 relative bg-gradient-to-b from-white/70 to-gray-50/60 backdrop-blur-[2px]">
+      <section className="py-16 relative">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             {/* Section Title with elegant frame */}
@@ -220,7 +227,7 @@ const HomePage = () => {
       </section>
 
       {/* Consultation Formats Section */}
-      <section className="py-16 bg-gradient-to-b from-white/70 to-gray-50/60 relative backdrop-blur-[2px]">
+      <section className="py-16 relative">
         <div className="container mx-auto px-6 relative">
           <div className="max-w-5xl mx-auto">
             {/* Section Title with elegant frame */}
@@ -306,22 +313,22 @@ const HomePage = () => {
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-xl transition-all duration-300 border-l-4 border-l-purple-500 group bg-white">
+              <Card className="hover:shadow-xl transition-all duration-300 border-l-4 border-l-purple-300 group bg-white">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-gradient-to-br from-purple-100 to-purple-50 p-3.5 rounded-xl group-hover:scale-110 transition-transform">
-                      <Heart className="w-6 h-6 text-purple-600" />
+                      <Heart className="w-6 h-6 text-purple-400" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="heading-3 mb-2 group-hover:text-purple-700 transition-colors">Réorientation thérapeutique</h3>
-                      <span className="text-xs bg-purple-100 text-purple-700 px-2.5 py-1 rounded-full font-medium">Réseau solidaire</span>
+                      <h3 className="heading-3 mb-2 group-hover:text-purple-400 transition-colors">Réorientation thérapeutique</h3>
+                      <span className="text-xs bg-purple-100 text-purple-400 px-2.5 py-1 rounded-full font-medium">Réseau solidaire</span>
                       <p className="body-small text-gray-600 mt-3 mb-3">
                         Si vos besoins vont au-delà de ce que je peux vous offrir, je vous réoriente vers un collectif de thérapeutes solidaires. 
                         En tant que créateur et membre de ce collectif, je vous aiderai à trouver un autre professionnel.
                       </p>
                       <div className="flex items-center gap-2 mt-4">
-                        <div className="w-8 h-px bg-purple-300"></div>
-                        <p className="font-semibold text-purple-700 text-sm">Service gratuit</p>
+                        <div className="w-8 h-px bg-purple-200"></div>
+                        <p className="font-semibold text-purple-400 text-sm">Service gratuit</p>
                       </div>
                     </div>
                   </div>
@@ -333,7 +340,7 @@ const HomePage = () => {
       </section>
 
       {/* Why Section */}
-      <section className="py-16 bg-gradient-to-b from-white/70 to-gray-50/60 relative backdrop-blur-[2px]">
+      <section className="py-16 relative">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             {/* Section Title with elegant frame */}
@@ -414,7 +421,7 @@ const HomePage = () => {
       </section>
 
       {/* AI Alternative Section */}
-      <section className="py-16 bg-gradient-to-br from-purple-50/70 via-white/60 to-blue-50/70 relative overflow-hidden backdrop-blur-[2px]">
+      <section className="py-16 relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-purple-200/20 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-blue-200/20 to-transparent rounded-full blur-3xl"></div>
@@ -425,12 +432,12 @@ const HomePage = () => {
             <div className="text-center mb-10 relative">
               <div className="inline-block relative px-8 py-4">
                 {/* Decorative corners */}
-                <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-purple-400 rounded-tl-lg"></div>
-                <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-purple-400 rounded-tr-lg"></div>
-                <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-purple-400 rounded-bl-lg"></div>
-                <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-purple-400 rounded-br-lg"></div>
+                <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-purple-300 rounded-tl-lg"></div>
+                <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-purple-300 rounded-tr-lg"></div>
+                <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-purple-300 rounded-bl-lg"></div>
+                <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-purple-300 rounded-br-lg"></div>
                 
-                <span className="text-xs uppercase tracking-wider text-purple-600 font-medium mb-2 block">Humanité & Authenticité</span>
+                <span className="text-xs uppercase tracking-wider text-purple-400 font-medium mb-2 block">Humanité & Authenticité</span>
                 <h2 className="heading-1 mb-0">Une alternative humaine, incarnée, à l'ère de l'IA</h2>
               </div>
             </div>
@@ -443,14 +450,14 @@ const HomePage = () => {
                     <span className="text-2xl">🤖</span>
                   </div>
                   <p className="body-large text-gray-700 leading-relaxed pt-2">
-                    Dans un monde où les <strong className="text-purple-700">réponses automatisées</strong>, les <strong className="text-purple-700">coachs virtuels</strong> et les interfaces émotionnelles pilotées par <strong className="text-purple-700">intelligence artificielle</strong> prennent de plus en plus de place, 
+                    Dans un monde où les <strong className="text-purple-400">réponses automatisées</strong>, les <strong className="text-purple-400">coachs virtuels</strong> et les interfaces émotionnelles pilotées par <strong className="text-purple-400">intelligence artificielle</strong> prennent de plus en plus de place, 
                     mon approche revendique avec force l'importance de la <strong className="text-green-700">présence humaine réelle</strong>, imparfaite et sensible.
                   </p>
                 </div>
                 
-                <div className="bg-gradient-to-r from-purple-100 via-blue-50 to-purple-100 rounded-2xl p-6 border-l-4 border-purple-500">
+                <div className="bg-gradient-to-r from-purple-100 via-blue-50 to-purple-100 rounded-2xl p-6 border-l-4 border-purple-300">
                   <p className="text-xl font-semibold text-gray-800 mb-4 text-center">
-                    Ce que je propose n'est <strong className="text-purple-700">ni standardisé</strong>, <strong className="text-purple-700">ni préprogrammé</strong>.
+                    Ce que je propose n'est <strong className="text-purple-400">ni standardisé</strong>, <strong className="text-purple-400">ni préprogrammé</strong>.
                   </p>
                   <p className="body-medium text-gray-700 text-center italic">
                     C'est un échange <strong>vivant</strong>, avec ses silences, ses hésitations, ses intuitions, ses résonances.
@@ -589,13 +596,13 @@ const HomePage = () => {
                     <span className="text-2xl">🔮</span>
                   </div>
                   <div>
-                    <h3 className="heading-3 mb-3 text-purple-800">En parallèle et "à venir"</h3>
+                    <h3 className="heading-3 mb-3 text-purple-500">En parallèle et "à venir"</h3>
                     <p className="body-medium text-gray-700 leading-relaxed mb-4">
-                      Par ailleurs, je suis en train de développer un <strong className="text-purple-700">projet confidentiel</strong> autour de l'écoute et du soin, destiné à valoriser les parcours 
-                      de vie des <strong className="text-purple-700">thérapeutes</strong>, des <strong className="text-purple-700">étudiants dans le soin</strong> et des <strong className="text-purple-700">patients</strong>.
+                      Par ailleurs, je suis en train de développer un <strong className="text-purple-400">projet confidentiel</strong> autour de l'écoute et du soin, destiné à valoriser les parcours 
+                      de vie des <strong className="text-purple-400">thérapeutes</strong>, des <strong className="text-purple-400">étudiants dans le soin</strong> et des <strong className="text-purple-400">patients</strong>.
                     </p>
                     <div className="bg-white/70 rounded-xl p-4 border border-purple-200 mb-4">
-                      <p className="body-medium font-semibold text-purple-800 text-center italic">
+                      <p className="body-medium font-semibold text-purple-500 text-center italic">
                         Une manière nouvelle de faire entendre l'humain et le soin.
                       </p>
                     </div>
